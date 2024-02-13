@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj6utbl88v5b2"]
+
+[ext_resource type="PackedScene" uid="uid://6m5s4tporuwc" path="res://addons/kaykit_prototype_bits/Assets/gltf/table_medium.gltf" id="1_2espq"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ejw4u"]
+points = PackedVector3Array(-0.980031, 0.619969, -0.75, -0.93011, 0.0199687, -0.700078, -1, 0.619969, -0.730031, -0.980031, 0.779953, -0.75, 0.979836, 0.619969, -0.75, -0.93011, -7.45058e-09, -0.68011, -0.950078, 0.0199687, -0.68011, 0.929914, 0.0199687, -0.700078, -1, 0.779953, -0.730031, -1, 0.619969, 0.729885, -0.980031, 0.8, -0.730031, 0.979836, 0.779953, -0.75, 1, 0.619969, -0.730031, -0.93011, -7.45058e-09, 0.679963, 0.929914, -7.45058e-09, -0.68011, -0.950078, 0.0199687, 0.679963, 0.949883, 0.0199687, -0.68011, -1, 0.779953, 0.729885, -0.980031, 0.619969, 0.75, -0.980031, 0.8, 0.729885, 0.979836, 0.8, -0.730031, 1, 0.779953, -0.730031, 1, 0.619969, 0.729885, -0.93011, 0.0199687, 0.699932, 0.929914, -7.45058e-09, 0.679963, 0.949883, 0.0199687, 0.679963, -0.980031, 0.779953, 0.75, 0.979836, 0.619969, 0.75, 0.979836, 0.8, 0.729885, 1, 0.779953, 0.729885, 0.929914, 0.0199687, 0.699932, 0.979836, 0.779953, 0.75)
+
+[node name="table_medium2" instance=ExtResource("1_2espq")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_ejw4u")

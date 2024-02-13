@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://bqr6k6oay17kt"]
+
+[ext_resource type="Script" path="res://Scene/main.gd" id="1_lr665"]
+[ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="2_0veuu"]
+[ext_resource type="PackedScene" uid="uid://ydsixscvkepy" path="res://Scene/pickable_examble.tscn" id="4_g3tqw"]
+[ext_resource type="Texture2D" uid="uid://cuxb4evgolai3" path="res://Name_1m x 1m.png" id="8_k0arb"]
+
+[sub_resource type="Environment" id="Environment_7s6u7"]
+background_mode = 1
+background_color = Color(0.811765, 0.796078, 0.807843, 1)
+background_energy_multiplier = 0.97
+ambient_light_energy = 4.84
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7bu8g"]
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("8_k0arb")
+albedo_texture_force_srgb = true
+uv1_scale = Vector3(5, 5, 5)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1dkpv"]
+size = Vector2(100, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_snx8b"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_lr665")
+
+[node name="XROrigin3D" parent="." instance=ExtResource("2_0veuu")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7s6u7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0809683)
+light_energy = 6.79
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.116513, 0)
+material_override = SubResource("StandardMaterial3D_7bu8g")
+mesh = SubResource("PlaneMesh_1dkpv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(20, 0, 0, 0, 0.2, 0, 0, 0, 20, 0, -0.116513, 0)
+shape = SubResource("BoxShape3D_snx8b")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0619464, 0.651583, -3.36648)
+layers = 1048575
+use_collision = true
+collision_layer = 5
+collision_mask = 5
+size = Vector3(2.00012, 1.48749, 0.67749)
+
+[node name="XRToolsPickable" parent="." instance=ExtResource("4_g3tqw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25959, -3.16035)
+
+[node name="XRToolsPickable2" parent="." instance=ExtResource("4_g3tqw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.651698, 2.28566, -3.24963)

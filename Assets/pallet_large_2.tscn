@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbqcpbgxq5go0"]
+
+[ext_resource type="PackedScene" uid="uid://ccsm1rkk4puph" path="res://addons/kaykit_prototype_bits/Assets/gltf/Pallet_Large.gltf" id="1_1rjhi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s0ihe"]
+size = Vector3(4.01489, 0.49707, 4.02289)
+
+[node name="Pallet_Large2" instance=ExtResource("1_1rjhi")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pallet_Large" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pallet_Large/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00305176, 0.251465, 0.00112915)
+shape = SubResource("BoxShape3D_s0ihe")

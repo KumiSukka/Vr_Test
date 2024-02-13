@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://jn1i8dw01ing"]
+
+[ext_resource type="PackedScene" uid="uid://ex4a7vxhesi0" path="res://addons/kaykit_prototype_bits/Assets/gltf/Wall.gltf" id="1_3vg83"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l6pxx"]
+size = Vector3(4.06171, 0.578613, 1)
+
+[node name="Wall2" instance=ExtResource("1_3vg83")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 6.8, 0, 0, 0, 0.5, -0.0325621, 1.97494, 0)
+shape = SubResource("BoxShape3D_l6pxx")

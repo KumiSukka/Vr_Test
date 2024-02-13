@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://ydsixscvkepy"]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_oiftk"]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="2_iqf6c"]
+[ext_resource type="ArrayMesh" uid="uid://dbdney3cdhd3u" path="res://addons/kaykit_prototype_bits/Assets/obj/Box_A.obj" id="2_suv05"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1qixv"]
+bounce = 0.22
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xi8ud"]
+size = Vector3(0.422627, 0.407526, 0.422322)
+
+[node name="XRToolsPickable" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54571, -3.16035)
+collision_layer = 4
+collision_mask = 196615
+physics_material_override = SubResource("PhysicsMaterial_1qixv")
+script = ExtResource("1_oiftk")
+second_hand_grab = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.00103178, 0.0219535, -0.000625372)
+shape = SubResource("BoxShape3D_xi8ud")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.0814737, 0)
+layers = 131077
+mesh = ExtResource("2_suv05")
+
+[node name="XRToolsGrabPointHand" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.116622, 0.0273993, -0.110219)
+script = ExtResource("2_iqf6c")
+hand = 1
+
+[node name="XRToolsGrabPointHand2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12025, 0.0280243, -0.104081)
+script = ExtResource("2_iqf6c")

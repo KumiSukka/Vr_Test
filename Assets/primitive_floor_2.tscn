@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c14777khunlci"]
+
+[ext_resource type="PackedScene" uid="uid://bykw7vu3s1bsm" path="res://addons/kaykit_prototype_bits/Assets/gltf/Primitive_Floor.gltf" id="1_gtncb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dvdia"]
+size = Vector3(1, 0.995667, 1)
+
+[node name="Primitive_Floor2" instance=ExtResource("1_gtncb")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(3.9969, 0, 0, 0, 1, 0, 0, 0, 4.02452, 0, 0.502289, 0)
+shape = SubResource("BoxShape3D_dvdia")

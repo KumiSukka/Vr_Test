@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://i836kbc53lru"]
+
+[ext_resource type="PackedScene" uid="uid://dco11hrc686bc" path="res://addons/kaykit_prototype_bits/Assets/gltf/Barrel_C.gltf" id="1_1srp2"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_43c5p"]
+height = 0.983568
+
+[node name="Movable_Barrel" type="RigidBody3D"]
+collision_layer = 131073
+mass = 3.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_43c5p")
+
+[node name="Barrel_C2" parent="." instance=ExtResource("1_1srp2")]

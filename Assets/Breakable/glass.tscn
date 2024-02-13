@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvhy1ac4eig1n"]
+
+[ext_resource type="PackedScene" uid="uid://byk3ask2phrlp" path="res://Assets/obj/glass_bottle.glb" id="1_ghydk"]
+[ext_resource type="Script" path="res://Assets/Breakable/glass.gd" id="1_ltwdb"]
+[ext_resource type="PackedScene" uid="uid://dfcsr4maen7ge" path="res://Assets/obj/glass_bottle_fractured.glb" id="2_vgeas"]
+
+[node name="Breakable_Bottle" type="Node3D"]
+script = ExtResource("1_ltwdb")
+fragment_collission_layer = 65537
+fragment_collission_mask = 65537
+
+[node name="glass_bottle" parent="." instance=ExtResource("1_ghydk")]
+
+[node name="glass_bottle_fractured" parent="." instance=ExtResource("2_vgeas")]
+
+[node name="origin" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
