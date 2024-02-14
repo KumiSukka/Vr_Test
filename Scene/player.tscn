@@ -359,6 +359,8 @@ smooth_turn_speed = 1.5
 visible = false
 enabled = false
 
+[connection signal="button_pressed" from="LeftHand" to="LeftHand" method="_on_button_pressed"]
+
 [editable path="LeftHand/LeftHand"]
 [editable path="LeftHand/LeftHand/Hand_low_L"]
 [editable path="RightHand/RightHand"]

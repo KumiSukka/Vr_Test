@@ -1,6 +1,6 @@
 extends XRController3D
 
-@export var ax_input = "ax_button"
+@export var ax_input = "ax_button" #for somereason registers this as touch and not pressed
 @onready var PickUp = $FunctionPickup
 @onready var Pointer = $FunctionPointer
 
@@ -11,11 +11,6 @@ extends XRController3D
 func _ready():
 	print(PickUp)
 	print(Pointer)
-	
-func _process(delta):
-	if is_button_pressed(ax_input): #This seems to work for getting input so progress
-		print("ax_pressed")
-		stanceSwap()
 
 		
 func stanceSwap():
@@ -35,3 +30,8 @@ func stanceSwap():
 		Pointer.visible = true
 		
 
+
+
+func _on_button_pressed(ax_input):
+		print("ax_pressed")
+		stanceSwap()
