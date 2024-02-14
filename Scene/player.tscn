@@ -147,7 +147,6 @@ filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_kdqac"]
-graph_offset = Vector2(-536, 11)
 nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_v05l2")
 nodes/ClosedHand1/position = Vector2(-600, 300)
 nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_b47jr")
@@ -253,6 +252,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 [node name="LeftHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
 tracker = &"left_hand"
+script = ExtResource("44_gtrl2")
 
 [node name="LeftHand" parent="LeftHand" instance=ExtResource("2_0tx5f")]
 hand_blend_tree = null
@@ -296,7 +296,7 @@ tree_root = SubResource("AnimationNodeBlendTree_kdqac")
 [node name="FunctionTeleport" parent="LeftHand/LeftHand" instance=ExtResource("3_uhde3")]
 teleport_button_action = "primary"
 
-[node name="XRToolsFunctionPickup" type="Node3D" parent="LeftHand"]
+[node name="FunctionPickup" type="Node3D" parent="LeftHand"]
 script = ExtResource("41_yws83")
 
 [node name="FunctionPointer" parent="LeftHand" instance=ExtResource("81_y3rbu")]
