@@ -510,3 +510,4 @@ func _update_render() -> void:
 		# Force a redraw of the viewport
 		if Engine.is_editor_hint() or update_mode == UpdateMode.UPDATE_ONCE:
 			$Viewport.render_target_update_mode = SubViewport.UPDATE_ONCE
+

@@ -10,7 +10,7 @@ extends Node3D
 @export var shatter:bool = false
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("Test"): #test key is k 
 		#Löydä tähän millä kakka imputilla saat sen toimimaan olkoon se tyyliin tarpeeksi nopea hajoaa tai sitten jos pelaaja releasee seuraava collission hajoaa
 		explode()
@@ -34,6 +34,6 @@ func explode():
 			frag.linear_velocity = Vector3.ZERO / break_speed
 			frag.lifetime = randf_range(min_frag_lifetime, max_frag_lifetime)
 
-func _on_area_3d_body_entered(body):
+func _on_area_3d_body_entered(_body):
 	if shatter:
 		explode()
