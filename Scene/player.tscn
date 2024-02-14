@@ -302,6 +302,7 @@ teleport_button_action = "primary"
 script = ExtResource("41_yws83")
 
 [node name="FunctionPointer" parent="LeftHand" instance=ExtResource("81_y3rbu")]
+enabled = false
 
 [node name="RightHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
@@ -357,6 +358,7 @@ smooth_turn_speed = 1.5
 [node name="FunctionPickup" parent="RightHand" instance=ExtResource("8_2mcvr")]
 
 [node name="FunctionPointer" parent="RightHand" instance=ExtResource("81_y3rbu")]
+enabled = false
 
 [editable path="LeftHand/LeftHand"]
 [editable path="LeftHand/LeftHand/Hand_low_L"]
