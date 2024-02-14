@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://fiul51tsyoop" path="res://addons/godot-xr-tools/functions/function_teleport.tscn" id="3_uhde3"]
 [ext_resource type="PackedScene" uid="uid://bjcxf427un2wp" path="res://addons/godot-xr-tools/player/poke/poke.tscn" id="4_iigmn"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="4_j16bw"]
-[ext_resource type="Script" path="res://Scene/hand_stance_controlls.gd" id="4_raaqw"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="5_13e30"]
 [ext_resource type="Animation" uid="uid://dgfeikrugfewi" path="res://addons/godot-xr-tools/hands/animations/left/Cup.res" id="5_py1pe"]
 [ext_resource type="Animation" uid="uid://dlxa6f6hwurka" path="res://addons/godot-xr-tools/hands/animations/left/Default pose.res" id="6_jcwqs"]
@@ -48,6 +47,7 @@
 [ext_resource type="Script" path="res://addons/godot-xr-tools/functions/function_pickup.gd" id="41_yws83"]
 [ext_resource type="Animation" uid="uid://do01jton6rk42" path="res://addons/godot-xr-tools/hands/animations/right/Cup.res" id="42_hcs42"]
 [ext_resource type="Animation" uid="uid://ky28birj4su6" path="res://addons/godot-xr-tools/hands/animations/right/Default pose.res" id="43_46r0h"]
+[ext_resource type="Script" path="res://Scene/Stance.gd" id="44_gtrl2"]
 [ext_resource type="Animation" uid="uid://ccds2u22gbxn7" path="res://addons/godot-xr-tools/hands/animations/right/Grip.res" id="44_pu5uu"]
 [ext_resource type="Animation" uid="uid://daqddcrbpam0c" path="res://addons/godot-xr-tools/hands/animations/right/Grip 1.res" id="45_xrdjc"]
 [ext_resource type="Animation" uid="uid://r8hleealhrqt" path="res://addons/godot-xr-tools/hands/animations/right/Grip 2.res" id="46_qsdc8"]
@@ -147,7 +147,6 @@ filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_kdqac"]
-graph_offset = Vector2(-536, 11)
 nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_v05l2")
 nodes/ClosedHand1/position = Vector2(-600, 300)
 nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_b47jr")
@@ -253,10 +252,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 [node name="LeftHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
 tracker = &"left_hand"
+script = ExtResource("44_gtrl2")
 
 [node name="LeftHand" parent="LeftHand" instance=ExtResource("2_0tx5f")]
-script = ExtResource("4_raaqw")
-ax_input = "ax_button"
 hand_blend_tree = null
 default_pose = null
 
@@ -298,18 +296,19 @@ tree_root = SubResource("AnimationNodeBlendTree_kdqac")
 [node name="FunctionTeleport" parent="LeftHand/LeftHand" instance=ExtResource("3_uhde3")]
 teleport_button_action = "primary"
 
-[node name="XRToolsFunctionPickup" type="Node3D" parent="LeftHand"]
+[node name="FunctionPickup" type="Node3D" parent="LeftHand"]
 script = ExtResource("41_yws83")
 
 [node name="FunctionPointer" parent="LeftHand" instance=ExtResource("81_y3rbu")]
+visible = false
+enabled = false
 
 [node name="RightHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
+script = ExtResource("44_gtrl2")
 
 [node name="RightHand" parent="RightHand" instance=ExtResource("4_j16bw")]
-script = ExtResource("4_raaqw")
-ax_input = "ax_button"
 hand_blend_tree = null
 default_pose = null
 
@@ -357,6 +356,10 @@ smooth_turn_speed = 1.5
 [node name="FunctionPickup" parent="RightHand" instance=ExtResource("8_2mcvr")]
 
 [node name="FunctionPointer" parent="RightHand" instance=ExtResource("81_y3rbu")]
+visible = false
+enabled = false
+
+[connection signal="button_pressed" from="LeftHand" to="LeftHand" method="_on_button_pressed"]
 
 [editable path="LeftHand/LeftHand"]
 [editable path="LeftHand/LeftHand/Hand_low_L"]
