@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bqr6k6oay17kt"]
+[gd_scene load_steps=26 format=3 uid="uid://bqr6k6oay17kt"]
 
 [ext_resource type="Script" path="res://Scene/main.gd" id="1_lr665"]
 [ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="2_0veuu"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://d03deb86l4xfs" path="res://Assets/toy_gun.tscn" id="13_yly0m"]
 [ext_resource type="Script" path="res://Scene/BulletManager.gd" id="14_cgwnr"]
 [ext_resource type="PackedScene" uid="uid://gpi40i31e6yc" path="res://Assets/Breakable/xr_pickable_glass.tscn" id="15_nri32"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="16_v1hqa"]
+[ext_resource type="PackedScene" uid="uid://sgtypnyrn7eg" path="res://Scene/menu.tscn" id="17_fx2se"]
 
 [sub_resource type="Environment" id="Environment_7s6u7"]
 background_mode = 1
@@ -31,6 +33,23 @@ uv1_scale = Vector3(10, 10, 10)
 size = Vector2(100, 100)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_snx8b"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ru6xt"]
+resource_local_to_scene = true
+size = Vector2(3, 2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_waykx"]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q4c2t"]
+transparency = 1
+cull_mode = 2
+albedo_texture = SubResource("ViewportTexture_waykx")
+texture_filter = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wrkvx"]
+resource_local_to_scene = true
+size = Vector3(3, 2, 0.02)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_lr665")
@@ -182,4 +201,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.61704, 0.779958, 1)
 [node name="xr_pickable_glass3" parent="." instance=ExtResource("15_nri32")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.11859, 0.779958, 1)
 
+[node name="Viewport2Din3D" parent="." instance=ExtResource("16_v1hqa")]
+transform = Transform3D(-5.09889e-08, -0.600663, -0.624081, -1.36624e-08, 2.24171, -0.167222, 1.20764, 0, -2.82418e-08, 21.8572, 3.95893, -4.10344)
+scene = ExtResource("17_fx2se")
+
+[node name="Screen" parent="Viewport2Din3D" index="1"]
+mesh = SubResource("QuadMesh_ru6xt")
+surface_material_override/0 = SubResource("StandardMaterial3D_q4c2t")
+
+[node name="CollisionShape3D" parent="Viewport2Din3D/StaticBody3D" index="0"]
+transform = Transform3D(1, -5.9508e-14, 4.61853e-14, 0, 1, 0, 0, 2.56235e-21, 1, 0, 9.53674e-07, -0.0100002)
+shape = SubResource("BoxShape3D_wrkvx")
+
 [editable path="Map2/Floor+Walls/Primitive_Slope2"]
+[editable path="Viewport2Din3D"]
