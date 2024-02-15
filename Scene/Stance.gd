@@ -1,18 +1,13 @@
 extends XRController3D
 
-@export var ax_input = "ax_button" #for somereason registers this as touch and not pressed
+ #for somereason registers this as touch and not pressed -> registers all inputs as this for somereason
 @onready var PickUp = $FunctionPickup
 @onready var Pointer = $FunctionPointer
+@export var by_input : String = "by_button"
 
 
 
-
-
-func _ready():
-	print(PickUp)
-	print(Pointer)
-
-		
+		#repeats twice figure out why???
 func stanceSwap():
 	if (PickUp.enabled == true):
 			PickUp.enabled = false
@@ -30,8 +25,7 @@ func stanceSwap():
 		Pointer.visible = true
 		
 
-
-
-func _on_button_pressed(ax_input):
-		print("ax_pressed")
+func _process(delta):
+	if is_button_pressed(by_input):
+		print("by painettu")
 		stanceSwap()
