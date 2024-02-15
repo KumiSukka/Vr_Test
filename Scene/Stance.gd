@@ -1,9 +1,9 @@
 extends XRController3D
 
- #for somereason registers this as touch and not pressed -> registers all inputs as this for somereason
+ 
 @onready var PickUp = $FunctionPickup
 @onready var Pointer = $FunctionPointer
-@export var by_input : String = "by_button"
+@export var by_input : String = "by_button" #Must be string otherwise takes all inputs for some reason
 
 
 
