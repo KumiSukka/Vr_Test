@@ -9,14 +9,14 @@ func destroy_bellet():
 
 
 func _on_bullet_cooldown_timeout():
-	destroy_bellet() # Replace with function body.
+	destroy_bellet() # Destroys bullet
 
-func  _ready():
+func  _ready():		#Monitoring script setting for contacts
 	set_contact_monitor(true)
 	set_max_contacts_reported(5)
 	set_use_custom_integrator(false)
 
-
+#Handling physics and regitering collission point
 func _physics_process(delta):
 	var collision_info = move_and_collide(velocity * delta)
 	if collision_info:

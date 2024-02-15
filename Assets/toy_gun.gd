@@ -5,6 +5,8 @@ var Bellet = preload("res://Assets/bellet.tscn")
 @export var bellet_speed =  -12.0
 var cooldown = true
 
+
+#Spawning bellets/bullet
 func _spawn_bellet():
 	var spawned_bellet = Bellet.instantiate()
 	owner.add_child(spawned_bellet)

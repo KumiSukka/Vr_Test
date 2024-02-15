@@ -298,10 +298,9 @@ teleport_button_action = "primary"
 
 [node name="FunctionPickup" type="Node3D" parent="LeftHand"]
 script = ExtResource("41_yws83")
+enabled = false
 
 [node name="FunctionPointer" parent="LeftHand" instance=ExtResource("81_y3rbu")]
-visible = false
-enabled = false
 
 [node name="RightHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
@@ -354,10 +353,9 @@ turn_mode = 2
 smooth_turn_speed = 1.5
 
 [node name="FunctionPickup" parent="RightHand" instance=ExtResource("8_2mcvr")]
+enabled = false
 
 [node name="FunctionPointer" parent="RightHand" instance=ExtResource("81_y3rbu")]
-visible = false
-enabled = false
 
 [connection signal="button_pressed" from="LeftHand" to="LeftHand" method="_on_button_pressed"]
 

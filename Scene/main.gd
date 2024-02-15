@@ -2,6 +2,8 @@ extends Node3D
 
 var xr_interface: XRInterface
 
+
+#Must run at stat to get xr point in godot
 func _ready():
 	xr_interface = XRServer.find_interface("OpenXR")
 	if xr_interface and xr_interface.is_initialized():

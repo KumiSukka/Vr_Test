@@ -1,6 +1,7 @@
 extends RigidBody3D
 class_name Fragment
 
+#How long alive
 @export var lifetime:float = 1
 var elapsed_time:float = 0
 
@@ -8,6 +9,7 @@ var elapsed_time:float = 0
 func _ready():
 	pass
 	
+	#Time for lifetime of sharts
 func _process(delta):
 	elapsed_time += delta
 	if elapsed_time > lifetime:
