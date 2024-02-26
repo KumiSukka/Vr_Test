@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://wgum7m2nuw3i"]
+
+[ext_resource type="PackedScene" uid="uid://c8yqv1cns5xog" path="res://addons/kaykit_prototype_bits/Assets/gltf/target.gltf" id="1_3rrq5"]
+[ext_resource type="Script" path="res://target.gd" id="2_4qlr5"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_e755i"]
+points = PackedVector3Array(-0.5, -9.78708e-05, 0.161179, -0.456148, -9.78708e-05, 0.19998, -0.395068, 0.227976, 0.19998, -0.433047, 0.249902, 0.161179, -0.469558, -9.78708e-05, 7.57251e-10, -0.433047, -0.250098, 0.161179, -0.395068, -0.228074, 0.19998, -0.228078, 0.394969, 0.19998, -0.250102, 0.432948, 0.161179, -0.406618, 0.23473, 7.57251e-10, -0.406618, -0.234828, 7.57251e-10, -0.250102, -0.433046, 0.161179, -0.228078, -0.395067, 0.19998, -0.00010547, 0.456049, 0.19998, -0.00010547, 0.5, 0.161179, -0.234832, 0.406519, 7.57251e-10, -0.234832, -0.406617, 7.57251e-10, -0.00010547, -0.456147, 0.19998, -0.00010547, -0.469558, 7.57251e-10, -0.00010547, -0.5, 0.161179, 0.227965, 0.394969, 0.19998, 0.249989, 0.432948, 0.161179, 0.234719, 0.406519, 7.57251e-10, -0.00010547, 0.46946, 7.57251e-10, 0.249989, -0.433046, 0.161179, 0.227965, -0.395067, 0.19998, 0.234719, -0.406617, 7.57251e-10, 0.394955, 0.227976, 0.19998, 0.432934, 0.249902, 0.161179, 0.406505, 0.23473, 7.57251e-10, 0.432934, -0.250098, 0.161179, 0.394955, -0.228074, 0.19998, 0.406505, -0.234828, 7.57251e-10, 0.456035, -9.78708e-05, 0.19998, 0.499887, -9.78708e-05, 0.161179, 0.469445, -9.78708e-05, 7.57251e-10)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_73dmt"]
+height = 0.299508
+
+[node name="Target" instance=ExtResource("1_3rrq5")]
+script = ExtResource("2_4qlr5")
+
+[node name="Body" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body" index="0"]
+shape = SubResource("ConvexPolygonShape3D_e755i")
+
+[node name="HitBox" type="Area3D" parent="." index="2"]
+
+[node name="coll" type="CollisionShape3D" parent="HitBox" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.106276)
+shape = SubResource("CylinderShape3D_73dmt")
