@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdu27n6x5bcbw"]
+
+[ext_resource type="ArrayMesh" uid="uid://kimm01w01q4o" path="res://addons/kaykit_prototype_bits/Assets/obj/Door_A.obj" id="1_m0032"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_q2p1s"]
+points = PackedVector3Array(1.53305, 1.08927, 0.282556, -0.0220613, -0.0222223, -0.117353, 0.013044, 0.0385065, 0.1, -0.0220613, 2.82222, -0.117353, 1.53305, 1.08927, -0.295222, 1.62222, 2.82222, -0.117353, 1.62222, -0.0222223, -0.117353, 0.013044, 2.76149, 0.1, 1.58712, 2.76149, 0.1, 1.58712, 0.0385065, 0.1, 1.26652, 0.911355, -0.295222, 1.26652, 0.911355, 0.282556, 1.31094, 1.13354, 0.282556, 1.31094, 1.13354, -0.295222, 1.31094, 0.866806, -0.295222, 1.31094, 0.866806, 0.282556, 1.26652, 1.08927, 0.282556, 1.48863, 1.13354, 0.282556, 1.26652, 1.08927, -0.295222, 1.48863, 1.13354, -0.295222)
+
+[node name="Door" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_m0032")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_q2p1s")
