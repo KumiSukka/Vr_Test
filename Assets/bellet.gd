@@ -26,3 +26,5 @@ func _physics_process(delta):
 		set_linear_velocity (Vector3.ZERO)
 		set_angular_velocity (Vector3.ZERO)
 		
+func projectile():
+	pass
