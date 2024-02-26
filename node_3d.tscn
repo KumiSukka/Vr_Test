@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8wq5bw43a33l"]
+
+[ext_resource type="ArrayMesh" uid="uid://bkdxf5by37fi0" path="res://addons/kaykit_prototype_bits/Assets/obj/Floor_Dirt.obj" id="1_rpy6y"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_rpy6y")
