@@ -42,7 +42,12 @@ points = PackedVector3Array(-2, 0, -2, -2, 0, 2, -2, 3.99995, -2, 2, 0, -2, -2, 
 
 [node name="Node3d" instance=ExtResource("1_wjvpx")]
 
+[node name="Floor_Dirt" parent="." index="0"]
+layers = 2
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor_Dirt" index="0"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor_Dirt/StaticBody3D" index="0"]
 shape = SubResource("ConvexPolygonShape3D_5reu1")
