@@ -302,6 +302,9 @@ enabled = false
 
 [node name="FunctionPointer" parent="LeftHand" instance=ExtResource("81_y3rbu")]
 
+[node name="Timer" type="Timer" parent="LeftHand"]
+wait_time = 0.1
+
 [node name="RightHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
@@ -357,7 +360,12 @@ enabled = false
 
 [node name="FunctionPointer" parent="RightHand" instance=ExtResource("81_y3rbu")]
 
+[node name="Timer" type="Timer" parent="RightHand"]
+wait_time = 0.1
+
 [connection signal="button_pressed" from="LeftHand" to="LeftHand" method="_on_button_pressed"]
+[connection signal="timeout" from="LeftHand/Timer" to="LeftHand" method="_on_timer_timeout"]
+[connection signal="timeout" from="RightHand/Timer" to="RightHand" method="_on_timer_timeout"]
 
 [editable path="LeftHand/LeftHand"]
 [editable path="LeftHand/LeftHand/Hand_low_L"]
