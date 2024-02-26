@@ -1,24 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://s8d2p2yqp0w0"]
+[gd_scene load_steps=2 format=3 uid="uid://s8d2p2yqp0w0"]
 
 [ext_resource type="PackedScene" uid="uid://myiokhpruomc" path="res://Assets/obj/gun.glb" id="1_rlok2"]
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bqod1"]
-points = PackedVector3Array(-0.575198, 3.15908, -3.64562, 0.470534, 3.15908, -3.64562, -0.784488, 3.57807, -12.2224, -0.575198, 5.87821, -3.22646, -0.784488, 6.2972, -11.8033, 0.611855, 3.68505, -11.804, 0.4707, 5.87857, -3.22504, 0.631155, 6.1926, -11.5313, -0.784488, 6.0877, -6.57528, -0.784488, 3.78726, -6.57528, 0.470534, 3.15908, -3.22646, -0.784488, 5.87821, -12.2224, 0.5753, 3.92175, -6.73955, -0.575198, 3.15908, -3.22646, 0.611855, 5.77123, -11.804, 0.5753, 5.89336, -6.73955)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vg5xo"]
-points = PackedVector3Array(-0.784365, 3.15842, -3.22646, 1.09838, 0.439785, 0.957471, -0.574871, 6.29716, 0.957471, -1.2029, -1.23421, 0.957471, 0.470581, 5.8787, -3.22649, 1.09838, -1.23421, -1.13385, 0.443089, 6.09369, 0.853, -1.2029, -1.23421, -1.13385, -0.574871, 5.87866, -3.22646, 0.679844, 1.69528, -2.8076, -0.993635, 3.57692, 0.539034, 0.889114, -1.6527, 0.957471, -1.2029, 0.439785, -1.34285, -0.993635, -1.6527, -0.925278, 1.09838, 0.439785, -1.34285, 0.679844, 3.15842, -3.22646, 1.02873, -0.816, 1.03393, -0.784365, 1.69528, -2.8076, 0.889114, -1.6527, -0.925278, -0.993635, -1.6527, 0.957471, -1.2029, 0.439785, 0.957471, 0.7845, 3.44912, 0.364694, 0.245439, 6.2972, 0.458583, -0.574871, 6.29716, -0.0884051, -0.784365, 3.78617, -3.22646, 1.09838, -0.815708, -1.34285, -1.2029, -0.815708, -1.34285, 0.7845, 3.26312, -2.05193, -1.0983, -0.711156, 0.967205)
 
 [node name="gun" instance=ExtResource("1_rlok2")]
 
 [node name="Cube" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
-[node name="RigidBody3D" type="RigidBody3D" parent="." index="1"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("ConvexPolygonShape3D_bqod1")
-
-[node name="@CollisionShape3D@25735" type="CollisionShape3D" parent="RigidBody3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("ConvexPolygonShape3D_vg5xo")

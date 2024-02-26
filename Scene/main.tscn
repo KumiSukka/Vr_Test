@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bqr6k6oay17kt"]
+[gd_scene load_steps=27 format=3 uid="uid://bqr6k6oay17kt"]
 
 [ext_resource type="Script" path="res://Scene/main.gd" id="1_lr665"]
 [ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="2_0veuu"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://gpi40i31e6yc" path="res://Assets/Breakable/xr_pickable_glass.tscn" id="15_nri32"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="16_v1hqa"]
 [ext_resource type="PackedScene" uid="uid://sgtypnyrn7eg" path="res://Scene/menu.tscn" id="17_fx2se"]
+[ext_resource type="PackedScene" uid="uid://cmijy6h1nbh53" path="res://Assets/xr_tools_gun_snap.tscn" id="18_6eodb"]
 
 [sub_resource type="Environment" id="Environment_7s6u7"]
 background_mode = 1
@@ -38,14 +39,14 @@ size = Vector2(100, 100)
 resource_local_to_scene = true
 size = Vector2(3, 2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_w5qp2"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ci1rf"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sha1q"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwii8"]
 transparency = 1
 cull_mode = 2
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_w5qp2")
+albedo_texture = SubResource("ViewportTexture_ci1rf")
 texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wrkvx"]
@@ -185,7 +186,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0984839, -3.2331)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.72757, -0.0984839, 4.2519)
 
 [node name="Toy-Gun" parent="." instance=ExtResource("13_yly0m")]
-transform = Transform3D(0.0665933, -0.997607, -0.0186041, -0.997779, -0.0666048, 7.75382e-11, -0.00123912, 0.0185628, -0.999827, 10.1182, 1.52471, 9.06469)
+transform = Transform3D(0.0665933, -0.997607, -0.0186041, -0.997779, -0.0666048, 7.75382e-11, -0.00123912, 0.0185628, -0.999827, 10.1182, 0.829729, 9.06469)
 mass = 5.0
 gravity_scale = 1.0
 
@@ -216,7 +217,7 @@ size = Vector2i(600, 400)
 
 [node name="Screen" parent="Viewport2Din3D" index="1"]
 mesh = SubResource("QuadMesh_ru6xt")
-surface_material_override/0 = SubResource("StandardMaterial3D_sha1q")
+surface_material_override/0 = SubResource("StandardMaterial3D_wwii8")
 
 [node name="StaticBody3D" parent="Viewport2Din3D" index="2"]
 viewport_size = Vector2(600, 400)
@@ -225,5 +226,9 @@ viewport_size = Vector2(600, 400)
 transform = Transform3D(1, -5.9508e-14, 4.61853e-14, 0, 1, 0, 0, 2.56235e-21, 1, 0, 9.53674e-07, -0.0100002)
 shape = SubResource("BoxShape3D_wrkvx")
 
+[node name="XRToolsGun_snap" parent="." instance=ExtResource("18_6eodb")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10.1387, 0.829383, 9.07436)
+
 [editable path="Map2/Floor+Walls/Primitive_Slope2"]
+[editable path="Toy-Gun"]
 [editable path="Viewport2Din3D"]
