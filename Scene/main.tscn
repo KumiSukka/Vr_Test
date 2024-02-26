@@ -38,14 +38,14 @@ size = Vector2(100, 100)
 resource_local_to_scene = true
 size = Vector2(3, 2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_2ad67"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_w5qp2"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_il0un"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sha1q"]
 transparency = 1
 cull_mode = 2
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_2ad67")
+albedo_texture = SubResource("ViewportTexture_w5qp2")
 texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wrkvx"]
@@ -203,9 +203,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.61704, 0.779958, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.11859, 0.779958, 1)
 
 [node name="Viewport2Din3D" parent="." instance=ExtResource("16_v1hqa")]
-transform = Transform3D(-1.2204e-07, -1.49209, -1.55031, -3.394e-08, 5.56856, -0.415405, 3, 2.30076e-09, -6.77662e-08, 21.8572, 4.95893, -2.10344)
+transform = Transform3D(-5.09818e-08, -0.0558977, -0.0717504, -2.47786e-09, 1.42842, -0.00280782, 1.20884, 5.70504e-10, -3.03176e-09, 21.8572, 2.60673, -2.10344)
 scene = ExtResource("17_fx2se")
 viewport_size = Vector2(600, 400)
+update_mode = 2
 throttle_fps = 24.0
 unshaded = true
 filter = false
@@ -215,7 +216,7 @@ size = Vector2i(600, 400)
 
 [node name="Screen" parent="Viewport2Din3D" index="1"]
 mesh = SubResource("QuadMesh_ru6xt")
-surface_material_override/0 = SubResource("StandardMaterial3D_il0un")
+surface_material_override/0 = SubResource("StandardMaterial3D_sha1q")
 
 [node name="StaticBody3D" parent="Viewport2Din3D" index="2"]
 viewport_size = Vector2(600, 400)

@@ -51,3 +51,5 @@ text = "Bottles"
 layout_mode = 2
 
 [connection signal="button_down" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/Button3" to="." method="_on_button_3_button_down"]
