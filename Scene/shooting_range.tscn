@@ -9,16 +9,13 @@
 [ext_resource type="PackedScene" uid="uid://d03deb86l4xfs" path="res://Assets/toy_gun.tscn" id="7_rcxtf"]
 [ext_resource type="PackedScene" uid="uid://cj6utbl88v5b2" path="res://Assets/table_medium_2.tscn" id="8_7lku7"]
 
-[sub_resource type="Environment" id="Environment_gcpcl"]
-background_mode = 1
-background_color = Color(0.784314, 0.623529, 0.529412, 1)
-ambient_light_energy = 4.84
+[sub_resource type="Environment" id="Environment_sghja"]
 
 [node name="Range" type="Node3D"]
 script = ExtResource("1_0r0h7")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_gcpcl")
+environment = SubResource("Environment_sghja")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("3_o65ff")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16, 0, 4)
@@ -139,10 +136,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111, 2, -27)
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -111, 5, -27)
 
 [node name="Toy-Gun" parent="." instance=ExtResource("7_rcxtf")]
-transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.91069e-15, 7.5, 0, 4)
+transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.91069e-15, 7.93851, 0, 4)
 
 [node name="table_medium2" parent="." instance=ExtResource("8_7lku7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -1, 4)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.961516, -0.0669873, 0.266457, -0.242362, 0.25, 0.937422, -0.12941, -0.965926, 0.224144, 0, 16, 0)
+light_energy = 1.14
+light_indirect_energy = 2.026
+light_volumetric_fog_energy = 1.61
+shadow_enabled = true
 
 [connection signal="child_exiting_tree" from="ROOM1" to="ROOM1" method="_on_child_exiting_tree"]
 [connection signal="child_exiting_tree" from="ROOM2" to="ROOM2" method="_on_child_exiting_tree"]
