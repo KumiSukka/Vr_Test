@@ -6,8 +6,6 @@ extends XRController3D
 @onready var timer = $Timer
 @export var by_input : String = "by_button" #Must be string otherwise takes all inputs for some reason
 var stance_cooldown = false
-
-
 		#repeats twice figure out why???
 func stanceSwap():
 	if (PickUp.enabled == true):
@@ -15,7 +13,6 @@ func stanceSwap():
 			PickUp.enabled = false
 			PickUp.visible = false
 	else:
-			stance_cooldown = true
 			PickUp.enabled = true
 			PickUp.visible = true
 	if (Pointer.enabled == true):
@@ -23,7 +20,6 @@ func stanceSwap():
 		Pointer.enabled = false
 		Pointer.visible = false
 	else:
-		stance_cooldown = true
 		Pointer.enabled = true
 		Pointer.visible = true
 		
