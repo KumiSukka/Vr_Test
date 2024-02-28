@@ -353,7 +353,7 @@ tree_root = SubResource("AnimationNodeBlendTree_si3ya")
 [node name="MovementDirect" parent="RightHand" instance=ExtResource("5_13e30")]
 
 [node name="MovementTurn" parent="RightHand" instance=ExtResource("6_q0370")]
-turn_mode = 2
+turn_mode = 1
 smooth_turn_speed = 1.5
 
 [node name="FunctionPickup" parent="RightHand" instance=ExtResource("8_2mcvr")]
