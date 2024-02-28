@@ -3,7 +3,7 @@ extends Node3D
 var childs = 0
 func _ready():
 	for i in self.get_child_count():
-		var temp = i - 1
+		var temp = i
 		childs = temp
 		
 func _on_child_exiting_tree(node):
