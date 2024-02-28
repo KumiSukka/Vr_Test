@@ -232,6 +232,8 @@ node_connections = [&"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigge
 [node name="XROrigin3D" type="XROrigin3D"]
 
 [node name="PlayerBody" parent="." instance=ExtResource("1_3tavg")]
+collision_layer = 2148007936
+collision_mask = 2147484671
 
 [node name="_CollisionShape3D_21096" type="CollisionShape3D" parent="PlayerBody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
@@ -295,7 +297,7 @@ tree_root = SubResource("AnimationNodeBlendTree_kdqac")
 
 [node name="FunctionTeleport" parent="LeftHand/LeftHand" instance=ExtResource("3_uhde3")]
 teleport_button_action = "primary"
-valid_teleport_mask = 4294967291
+valid_teleport_mask = 1
 
 [node name="FunctionPickup" type="Node3D" parent="LeftHand"]
 script = ExtResource("41_yws83")
