@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0shcllq8y42y"]
+
+[ext_resource type="PackedScene" uid="uid://cjyilbm4ucc7s" path="res://addons/godot-xr-tools/objects/climbable.tscn" id="1_gk7jp"]
+[ext_resource type="ArrayMesh" uid="uid://bkqy606kvf53k" path="res://addons/kaykit_prototype_bits/Assets/obj/Cube_Prototype_Large_B.obj" id="2_teja4"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cbe30"]
+points = PackedVector3Array(1.89977, 4, 1.89977, 2, 3.89977, 1.89977, 1.89977, 4, -1.90016, -1.90016, 4, 1.89977, 1.89977, 3.89977, 2, 2, 3.89977, -1.90016, 2, 0.0998434, 1.89977, 1.89977, 3.89977, -2, -1.90016, 4, -1.90016, -2, 3.89977, 1.89977, -1.90016, 3.89977, 2, 1.89977, 0.0998434, 2, 2, 0.0998434, -1.90016, 1.89977, 0, 1.89977, 1.89977, 0.0998434, -2, -1.90016, 3.89977, -2, -2, 3.89977, -1.90016, -2, 0.0998434, 1.89977, -1.90016, 0.0998434, 2, 1.89977, 0, -1.90016, -1.90016, 0, 1.89977, -1.90016, 0.0998434, -2, -2, 0.0998434, -1.90016, -1.90016, 0, -1.90016)
+
+[node name="ClimbableBlock" instance=ExtResource("1_gk7jp")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+mesh = ExtResource("2_teja4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_cbe30")
