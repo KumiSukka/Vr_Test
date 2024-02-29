@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d06lhoteum1k2"]
+[gd_scene load_steps=14 format=3 uid="uid://d06lhoteum1k2"]
 
 [ext_resource type="Script" path="res://Scene/shooting_range.gd" id="1_0r0h7"]
 [ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="3_o65ff"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://wgum7m2nuw3i" path="res://target.tscn" id="5_lg7id"]
 [ext_resource type="PackedScene" uid="uid://d03deb86l4xfs" path="res://Assets/toy_gun.tscn" id="7_rcxtf"]
 [ext_resource type="PackedScene" uid="uid://cj6utbl88v5b2" path="res://Assets/table_medium_2.tscn" id="8_7lku7"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="9_8bp2v"]
+[ext_resource type="PackedScene" uid="uid://c4ssnplclmaip" path="res://Scene/Victory_Menu.tscn" id="10_8oh3w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2sfld"]
 
@@ -191,6 +193,11 @@ light_energy = 1.14
 light_indirect_energy = 2.026
 light_volumetric_fog_energy = 1.61
 shadow_enabled = true
+
+[node name="Viewport2Din3D" parent="." instance=ExtResource("9_8bp2v")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -128, 1, -21)
+scene = ExtResource("10_8oh3w")
+viewport_size = Vector2(420, 200)
 
 [connection signal="child_exiting_tree" from="ROOM1" to="ROOM1" method="_on_child_exiting_tree"]
 [connection signal="child_exiting_tree" from="ROOM2" to="ROOM2" method="_on_child_exiting_tree"]
