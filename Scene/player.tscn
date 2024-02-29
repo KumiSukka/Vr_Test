@@ -301,9 +301,9 @@ valid_teleport_mask = 1
 
 [node name="FunctionPickup" type="Node3D" parent="LeftHand"]
 script = ExtResource("41_yws83")
-enabled = false
 
 [node name="FunctionPointer" parent="LeftHand" instance=ExtResource("81_y3rbu")]
+enabled = false
 
 [node name="Timer" type="Timer" parent="LeftHand"]
 wait_time = 0.1
@@ -359,9 +359,9 @@ turn_mode = 1
 smooth_turn_speed = 1.5
 
 [node name="FunctionPickup" parent="RightHand" instance=ExtResource("8_2mcvr")]
-enabled = false
 
 [node name="FunctionPointer" parent="RightHand" instance=ExtResource("81_y3rbu")]
+enabled = false
 
 [node name="Timer" type="Timer" parent="RightHand"]
 wait_time = 0.1
