@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://d06lhoteum1k2"]
 
-[ext_resource type="Script" path="res://Scene/shooting_range.gd" id="1_0r0h7"]
+[ext_resource type="Script" path="res://Scene/main.gd" id="1_207uv"]
 [ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="3_o65ff"]
 [ext_resource type="MeshLibrary" uid="uid://dh013jkukc3tx" path="res://floorlib.tres" id="3_rplpq"]
 [ext_resource type="Script" path="res://Scene/Room.gd" id="4_j0ss4"]
@@ -25,7 +25,7 @@ sky = SubResource("Sky_yr101")
 points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
 
 [node name="Range" type="Node3D"]
-script = ExtResource("1_0r0h7")
+script = ExtResource("1_207uv")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_sghja")

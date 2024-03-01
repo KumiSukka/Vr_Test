@@ -11,7 +11,6 @@ func _on_child_exiting_tree(node):
 	if childs <= 0:
 		print("tuhoa huone")
 		for n in self.get_children():
-			self.remove_child(n)
 			n.queue_free()
 			self.queue_free 
 	else:

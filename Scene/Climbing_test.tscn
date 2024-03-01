@@ -45,7 +45,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 28, 0)
 
 [node name="XROrigin3D" parent="." instance=ExtResource("3_tctds")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.648985, 0.771204, -3)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.648985, 20.7024, 52.3087)
 
 [node name="clim2" type="Node3D" parent="."]
 
@@ -256,6 +256,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9049, 23.056, 73.6593)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.96599, 29.6894, 91.9122)
 
 [node name="Detect_Player" type="Area3D" parent="."]
+collision_layer = 524289
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Detect_Player"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.719857, 2.42376, 0.829187)
@@ -263,6 +264,7 @@ shape = SubResource("BoxShape3D_3s23b")
 
 [node name="Detect_Player2" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 22.8309, 73.4899)
+collision_layer = 524289
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Detect_Player2"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.719857, 2.42376, 0.829187)
@@ -270,6 +272,7 @@ shape = SubResource("BoxShape3D_3s23b")
 
 [node name="Detect_Player3" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 29.8309, 91.4899)
+collision_layer = 524289
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Detect_Player3"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.719857, 2.42376, 0.829187)

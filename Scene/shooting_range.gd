@@ -6,7 +6,7 @@ extends Node3D
 @onready var returnpoint2 = $Checkpoint2
 @onready var returnpoint3 = $Checkpoint3
 
-var current_return
+var current_return = Vector3.ZERO
 var xr_interface: XRInterface
 
 
@@ -31,12 +31,13 @@ func _ready():
 func _on_fall_catcher_body_entered(body):
 	print(body)
 	print(current_return)
-	player.global_position = current_return.global_position
+	player.global_position = current_return
 
 
 func _on_fall_catcher_body_exited(body):
 	print(body)
-	player.global_position = current_return.global_position
+	print(current_return)
+	player.global_position = current_return
 
 
 func _on_detect_player_body_entered(body):
