@@ -149,6 +149,8 @@ transform = Transform3D(1.52563, -0.439448, 0.0175003, 0.539147, 0.620059, -0.71
 transform = Transform3D(1.67027, 0.134057, 0.123513, 0.0855862, 0.451327, -0.890935, -0.297586, 0.882232, 0.437011, -4.61436, 19.807, 42.5939)
 
 [node name="Fall_Catcher" type="Area3D" parent="."]
+collision_layer = 524289
+collision_mask = 524289
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Fall_Catcher"]
 transform = Transform3D(300, 0, 0, 0, 300, 0, 0, 0, 300, 0, -12.0349, 136.681)
