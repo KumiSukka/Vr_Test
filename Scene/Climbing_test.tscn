@@ -162,4 +162,7 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1, 32.
 scene = ExtResource("6_rtx32")
 viewport_size = Vector2(420, 200)
 
+[node name="ClimbableBlock2" parent="." instance=ExtResource("4_rdmge")]
+transform = Transform3D(2, 0, 0, 0, 1.95733, 30.8205, 0, -0.41094, 146.8, 0.884912, 26.5435, 82.9784)
+
 [connection signal="body_entered" from="Fall_Catcher" to="." method="_on_fall_catcher_body_entered"]
