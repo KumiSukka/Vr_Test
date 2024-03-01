@@ -71,10 +71,10 @@ transform = Transform3D(1.16875, 0, 0, 0, 9.93301, 0, 0, 0, 1.99161, 3.62595, 4.
 [node name="clim_path1" type="Node3D" parent="."]
 
 [node name="stick" parent="clim_path1" instance=ExtResource("4_rdmge")]
-transform = Transform3D(1.16875, 0, 0, 0, 7.02676, -1.40767, 0, 7.02064, 1.4089, -1.73536, 8.01606, 31.0967)
+transform = Transform3D(1.16875, 0, 0, 0, 9.06776, -0.812983, 0, 4.05469, 1.81813, -1.73536, 8.01606, 31.0967)
 
 [node name="stick2" parent="clim_path1" instance=ExtResource("4_rdmge")]
-transform = Transform3D(0.950522, 5.77875, -0.0209324, -0.490327, 5.69931, -1.4009, -0.471227, 5.72614, 1.41547, -0.732961, 10.8963, 33.9954)
+transform = Transform3D(0.950522, 5.77875, -0.0209324, -0.366424, 4.20088, -1.69327, -0.572895, 6.90097, 1.04829, -0.732961, 11.6378, 32.8347)
 
 [node name="ClimbableBlock2" parent="clim_path1" instance=ExtResource("4_rdmge")]
 transform = Transform3D(2.77429, 0, 0, 0, 1.81823, -0.667197, 0, 1.98675, 0.610603, 2.81282, 13.2119, 36.0903)
