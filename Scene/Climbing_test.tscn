@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://da0r3wica24uy"]
+[gd_scene load_steps=12 format=3 uid="uid://da0r3wica24uy"]
 
 [ext_resource type="Script" path="res://Scene/shooting_range.gd" id="1_nawu3"]
 [ext_resource type="MeshLibrary" uid="uid://dh013jkukc3tx" path="res://floorlib.tres" id="2_qt5kk"]
@@ -20,7 +20,9 @@ sky = SubResource("Sky_5lt8y")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ltsjk"]
 points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_3s23b"]
+
+[node name="Climping_map" type="Node3D"]
 script = ExtResource("1_nawu3")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -156,9 +158,6 @@ collision_mask = 524289
 transform = Transform3D(300, 0, 0, 0, 300, 0, 0, 0, 300, 0, -12.0349, 136.681)
 shape = SubResource("ConvexPolygonShape3D_ltsjk")
 
-[node name="Checkpoint" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 21.1412, 50.6269)
-
 [node name="Viewport2Din3D" parent="." instance=ExtResource("5_a6jkg")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1, 32.454, 122.93)
 scene = ExtResource("6_rtx32")
@@ -247,5 +246,37 @@ transform = Transform3D(0.604716, -2.47804, 0.549736, -0.723726, -2.94873, 0.077
 [node name="ClimbableBlock28" parent="FinalClimb" instance=ExtResource("4_rdmge")]
 transform = Transform3D(0.604716, -2.47804, 0.549736, -0.723726, -2.94873, 0.0772345, 0.0415591, -0.238953, -0.10397, -1.86729, -47.6187, 1.64894)
 
+[node name="Checkpoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 21.1412, 50.6269)
+
+[node name="Checkpoint2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9049, 23.056, 73.6593)
+
+[node name="Checkpoint3" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.96599, 29.6894, 91.9122)
+
+[node name="Detect_Player" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Detect_Player"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.719857, 2.42376, 0.829187)
+shape = SubResource("BoxShape3D_3s23b")
+
+[node name="Detect_Player2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 22.8309, 73.4899)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Detect_Player2"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.719857, 2.42376, 0.829187)
+shape = SubResource("BoxShape3D_3s23b")
+
+[node name="Detect_Player3" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 29.8309, 91.4899)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Detect_Player3"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.719857, 2.42376, 0.829187)
+shape = SubResource("BoxShape3D_3s23b")
+
 [connection signal="body_entered" from="Fall_Catcher" to="." method="_on_fall_catcher_body_entered"]
 [connection signal="body_exited" from="Fall_Catcher" to="." method="_on_fall_catcher_body_exited"]
+[connection signal="body_entered" from="Detect_Player" to="." method="_on_detect_player_body_entered"]
+[connection signal="body_entered" from="Detect_Player2" to="." method="_on_detect_player_2_body_entered"]
+[connection signal="body_entered" from="Detect_Player3" to="." method="_on_detect_player_3_body_entered"]
