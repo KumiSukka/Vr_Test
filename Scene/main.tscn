@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bqr6k6oay17kt"]
+[gd_scene load_steps=29 format=3 uid="uid://bqr6k6oay17kt"]
 
 [ext_resource type="Script" path="res://Scene/main.gd" id="1_lr665"]
 [ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="2_0veuu"]
@@ -40,19 +40,22 @@ size = Vector2(100, 100)
 resource_local_to_scene = true
 size = Vector2(3, 2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ht4nf"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_k01o6"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k1tk6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knopu"]
 transparency = 1
 cull_mode = 2
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_ht4nf")
+albedo_texture = SubResource("ViewportTexture_k01o6")
 texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wrkvx"]
 resource_local_to_scene = true
 size = Vector3(3, 2, 0.02)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_f0a82"]
+points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_lr665")
@@ -218,7 +221,7 @@ size = Vector2i(600, 400)
 
 [node name="Screen" parent="Viewport2Din3D" index="1"]
 mesh = SubResource("QuadMesh_urr6x")
-surface_material_override/0 = SubResource("StandardMaterial3D_k1tk6")
+surface_material_override/0 = SubResource("StandardMaterial3D_knopu")
 
 [node name="StaticBody3D" parent="Viewport2Din3D" index="2"]
 viewport_size = Vector2(600, 400)
@@ -232,6 +235,21 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10.086
 
 [node name="Target" parent="." instance=ExtResource("19_g6kjg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.86832, 2.30839, -23.8083)
+
+[node name="Fall_Catcher" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -48.6893, 0)
+collision_layer = 524289
+collision_mask = 524289
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fall_Catcher"]
+transform = Transform3D(300, 0, 0, 0, 300, 0, 0, 0, 300, 0, -12.0349, 136.681)
+shape = SubResource("ConvexPolygonShape3D_f0a82")
+
+[node name="Checkpoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.33429, 0, 0)
+
+[connection signal="body_entered" from="Fall_Catcher" to="." method="_on_fall_catcher_body_entered"]
+[connection signal="body_exited" from="Fall_Catcher" to="." method="_on_fall_catcher_body_exited"]
 
 [editable path="Map2/Floor+Walls/Primitive_Slope2"]
 [editable path="Toy-Gun"]
