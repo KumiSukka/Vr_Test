@@ -3,3 +3,4 @@
 [ext_resource type="PackedScene" uid="uid://c0shcllq8y42y" path="res://Assets/climbable_block.tscn" id="1_bvtv3"]
 
 [node name="ClimbableBlockLong" instance=ExtResource("1_bvtv3")]
+collision_layer = 262144
