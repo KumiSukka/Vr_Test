@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://da0r3wica24uy"]
 
-[ext_resource type="Script" path="res://Scene/shooting_range.gd" id="1_nawu3"]
+[ext_resource type="Script" path="res://Scene/Climping.gd" id="1_nawu3"]
 [ext_resource type="MeshLibrary" uid="uid://dh013jkukc3tx" path="res://floorlib.tres" id="2_qt5kk"]
 [ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="3_tctds"]
 [ext_resource type="PackedScene" uid="uid://c0shcllq8y42y" path="res://Assets/climbable_block.tscn" id="4_rdmge"]
