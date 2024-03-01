@@ -24,4 +24,4 @@ func _ready():
 
 
 func _on_fall_catcher_body_entered(body):
-	player.position = returnpoint.global_position
+	player.global_position = returnpoint.global_position
