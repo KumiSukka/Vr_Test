@@ -7,6 +7,9 @@ extends XRController3D
 @export var by_input : String = "by_button" #Must be string otherwise takes all inputs for some reason
 var stance_cooldown = false
 		#repeats twice figure out why???
+		
+func _ready():
+	stanceSwap()
 func stanceSwap():
 	if (PickUp.enabled == true):
 			stance_cooldown = true

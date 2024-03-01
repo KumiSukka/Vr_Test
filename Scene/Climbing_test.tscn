@@ -267,7 +267,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 22.8309, 73.4899)
 collision_layer = 524289
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Detect_Player2"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.719857, 2.42376, 0.829187)
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0.230176, 2.42376, 0.417435)
 shape = SubResource("BoxShape3D_3s23b")
 
 [node name="Detect_Player3" type="Area3D" parent="."]
@@ -275,7 +275,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 29.8309, 91.4899)
 collision_layer = 524289
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Detect_Player3"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.719857, 2.42376, 0.829187)
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0.0505676, 1.42376, 0.619888)
 shape = SubResource("BoxShape3D_3s23b")
 
 [connection signal="body_entered" from="Fall_Catcher" to="." method="_on_fall_catcher_body_entered"]
