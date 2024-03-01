@@ -25,6 +25,9 @@ points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
 [node name="Climping_map" type="Node3D"]
 script = ExtResource("1_nawu3")
 
+[node name="XROrigin3D" parent="." instance=ExtResource("3_tctds")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.841724, 0.783316, -0.691299)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xbenj")
 
@@ -44,37 +47,34 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 28, 0)
 
-[node name="XROrigin3D" parent="." instance=ExtResource("3_tctds")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.648985, 20.7024, 52.3087)
-
 [node name="clim2" type="Node3D" parent="."]
 
 [node name="ramp_climb" type="Node3D" parent="."]
 
 [node name="ClimbableBlock" parent="." instance=ExtResource("4_rdmge")]
-transform = Transform3D(23.8991, 0, 0, 0, 9.69451, 0, 0, 0, 1.63972, 1, 0.337521, 10.738)
+transform = Transform3D(23.8991, 0, 0, 0, 9.69451, 0, 0, 0, 1.63972, 1, 0.563895, 10.9348)
 
 [node name="ladders" type="Node3D" parent="."]
 
 [node name="stick" parent="ladders" instance=ExtResource("4_rdmge")]
-transform = Transform3D(1.16875, 0, 0, 0, 9.93301, 0, 0, 0, 1.99161, -1.73536, 4.39806, 18.6422)
+transform = Transform3D(1.16875, 0, 0, 0, 9.93301, 0, 0, 0, 1.99161, -1.73536, 4.61265, 18.9304)
 
 [node name="stick2" parent="ladders" instance=ExtResource("4_rdmge")]
-transform = Transform3D(1.16875, 0, 0, 0, 9.93301, 0, 0, 0, 1.99161, -0.399923, 4.39806, 18.6422)
+transform = Transform3D(1.16875, 0, 0, 0, 9.93301, 0, 0, 0, 1.99161, -0.399923, 4.61265, 18.9304)
 
 [node name="stick3" parent="ladders" instance=ExtResource("4_rdmge")]
-transform = Transform3D(1.16875, 0, 0, 0, 9.93301, 0, 0, 0, 1.99161, 2.29051, 4.39806, 18.6422)
+transform = Transform3D(1.16875, 0, 0, 0, 9.93301, 0, 0, 0, 1.99161, 2.29051, 4.61265, 18.9304)
 
 [node name="stick4" parent="ladders" instance=ExtResource("4_rdmge")]
-transform = Transform3D(1.16875, 0, 0, 0, 9.93301, 0, 0, 0, 1.99161, 3.62595, 4.39806, 18.6422)
+transform = Transform3D(1.16875, 0, 0, 0, 9.93301, 0, 0, 0, 1.99161, 3.62595, 4.61265, 18.9304)
 
 [node name="clim_path1" type="Node3D" parent="."]
 
 [node name="stick" parent="clim_path1" instance=ExtResource("4_rdmge")]
-transform = Transform3D(1.16875, 0, 0, 0, 7.02676, -1.40767, 0, 7.02064, 1.4089, -1.73536, 8.01606, 30.5967)
+transform = Transform3D(1.16875, 0, 0, 0, 7.02676, -1.40767, 0, 7.02064, 1.4089, -1.73536, 8.01606, 31.0967)
 
 [node name="stick2" parent="clim_path1" instance=ExtResource("4_rdmge")]
-transform = Transform3D(0.950522, 5.77875, -0.0209324, -0.490327, 5.69931, -1.4009, -0.471227, 5.72614, 1.41547, -0.732961, 11.2207, 33.8291)
+transform = Transform3D(0.950522, 5.77875, -0.0209324, -0.490327, 5.69931, -1.4009, -0.471227, 5.72614, 1.41547, -0.732961, 10.8963, 33.9954)
 
 [node name="ClimbableBlock2" parent="clim_path1" instance=ExtResource("4_rdmge")]
 transform = Transform3D(2.77429, 0, 0, 0, 1.81823, -0.667197, 0, 1.98675, 0.610603, 2.81282, 13.2119, 36.0903)
@@ -127,10 +127,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.67388, 19.9467, 42.9467)
 [node name="clim_path2" type="Node3D" parent="."]
 
 [node name="ClimbableBlock2" parent="clim_path2" instance=ExtResource("4_rdmge")]
-transform = Transform3D(6.2015, 0.499607, 0, -2.53029, 0.612821, -0.706774, -2.52791, 0.612244, 0.70744, -0.609379, 13.8446, 36.6739)
+transform = Transform3D(6.2015, 0.499607, 0, -2.53029, 0.612821, -0.706774, -2.52791, 0.612244, 0.70744, -0.609379, 13.8446, 36.8412)
 
 [node name="ClimbableBlock3" parent="clim_path2" instance=ExtResource("4_rdmge")]
-transform = Transform3D(-2.38077, 0.942921, 0.0175002, -4.73194, -0.219802, -0.717493, -4.81581, -0.250174, 0.696346, -3.20436, 15.1002, 37.8861)
+transform = Transform3D(-2.38077, 0.942921, 0.0175002, -4.73194, -0.219802, -0.717493, -4.81581, -0.250174, 0.696346, -3.20436, 15.1002, 38.1513)
 
 [node name="ClimbableBlock4" parent="clim_path2" instance=ExtResource("4_rdmge")]
 transform = Transform3D(7.03689, -0.183081, 0.0175003, 1.00135, 0.682378, -0.717493, 0.854912, 0.707701, 0.696346, -5.05375, 15.9374, 38.7952)
@@ -259,7 +259,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.96599, 29.6894, 91.9122)
 collision_layer = 524289
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Detect_Player"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.719857, 2.42376, 0.829187)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.719857, 3.42376, 0.829187)
 shape = SubResource("BoxShape3D_3s23b")
 
 [node name="Detect_Player2" type="Area3D" parent="."]
