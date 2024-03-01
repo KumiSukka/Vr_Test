@@ -166,3 +166,4 @@ viewport_size = Vector2(420, 200)
 transform = Transform3D(2, 0, 0, 0, 1.95733, 30.8205, 0, -0.41094, 146.8, 0.884912, 26.5435, 82.9784)
 
 [connection signal="body_entered" from="Fall_Catcher" to="." method="_on_fall_catcher_body_entered"]
+[connection signal="body_exited" from="Fall_Catcher" to="." method="_on_fall_catcher_body_exited"]
