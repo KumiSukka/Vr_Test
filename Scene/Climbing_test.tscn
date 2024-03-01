@@ -223,29 +223,29 @@ transform = Transform3D(0.604716, -2.47804, 0.549736, -0.723726, -2.94873, 0.077
 [node name="ClimbableBlock20" parent="FinalClimb" instance=ExtResource("4_rdmge")]
 transform = Transform3D(0.889153, 0, -0.45761, -0.45761, -1.87959e-07, -0.889153, -2.50035e-09, 0.5375, -4.85826e-09, -1.33101, -48.6974, 1.53869)
 
-[node name="ClimbableBlock12" parent="." instance=ExtResource("4_rdmge")]
-transform = Transform3D(0.265649, -4.12327, -0.0996977, -0.160184, 0.249718, -0.985377, 0.950669, 1.19426, -0.138173, -0.355152, 35.9741, 102.916)
+[node name="ClimbableBlock21" parent="FinalClimb" instance=ExtResource("4_rdmge")]
+transform = Transform3D(0.265649, -4.12327, -0.0996977, -0.950669, -1.19426, 0.138173, -0.020023, 0.0312147, -0.123172, -1.33101, -48.6974, 1.85247)
 
-[node name="ClimbableBlock13" parent="." instance=ExtResource("4_rdmge")]
-transform = Transform3D(0.265649, -4.12327, -0.0996977, -0.160184, 0.249718, -0.985377, 0.950669, 1.19426, -0.138173, 0.183893, 35.9741, 104.27)
+[node name="ClimbableBlock22" parent="FinalClimb" instance=ExtResource("4_rdmge")]
+transform = Transform3D(0.265649, -4.12327, -0.0996977, -0.950669, -1.19426, 0.138173, -0.020023, 0.0312147, -0.123172, -0.791964, -50.0511, 1.85247)
 
-[node name="ClimbableBlock14" parent="." instance=ExtResource("4_rdmge")]
-transform = Transform3D(0.265649, -4.12327, -0.0996977, -0.160184, 0.249718, -0.985377, 0.950669, 1.19426, -0.138173, 0.473053, 35.9741, 105.671)
+[node name="ClimbableBlock23" parent="FinalClimb" instance=ExtResource("4_rdmge")]
+transform = Transform3D(0.265649, -4.12327, -0.0996977, -0.950669, -1.19426, 0.138173, -0.020023, 0.0312147, -0.123172, -0.502804, -51.4529, 1.85247)
 
-[node name="ClimbableBlock15" parent="." instance=ExtResource("4_rdmge")]
-transform = Transform3D(0.265649, -4.12327, -0.0996977, -0.160184, 0.249718, -0.985377, 0.950669, 1.19426, -0.138173, 1.0121, 35.9741, 107.025)
+[node name="ClimbableBlock24" parent="FinalClimb" instance=ExtResource("4_rdmge")]
+transform = Transform3D(0.265649, -4.12327, -0.0996977, -0.950669, -1.19426, 0.138173, -0.020023, 0.0312147, -0.123172, 0.0362409, -52.8065, 1.85247)
 
-[node name="ClimbableBlock16" parent="." instance=ExtResource("4_rdmge")]
-transform = Transform3D(0.206501, -3.55273, 0.524143, 0.332473, -1.91162, -0.83176, 0.920228, 1.4879, 0.182892, 1.31145, 36.7291, 108.249)
+[node name="ClimbableBlock25" parent="FinalClimb" instance=ExtResource("4_rdmge")]
+transform = Transform3D(0.206501, -3.55273, 0.524143, -0.920228, -1.4879, -0.182892, 0.0415591, -0.238953, -0.10397, 0.335598, -54.0307, 1.94684)
 
-[node name="ClimbableBlock9" parent="." instance=ExtResource("4_rdmge")]
-transform = Transform3D(0.604716, -2.47804, 0.549736, 0.332473, -1.91162, -0.83176, 0.723726, 2.94873, -0.0772345, -2.3705, 33.0036, 99.7662)
+[node name="ClimbableBlock26" parent="FinalClimb" instance=ExtResource("4_rdmge")]
+transform = Transform3D(0.604716, -2.47804, 0.549736, -0.723726, -2.94873, 0.0772345, 0.0415591, -0.238953, -0.10397, -3.34635, -45.5477, 1.48116)
 
-[node name="ClimbableBlock10" parent="." instance=ExtResource("4_rdmge")]
-transform = Transform3D(0.604716, -2.47804, 0.549736, 0.332473, -1.91162, -0.83176, 0.723726, 2.94873, -0.0772345, -1.70508, 33.6075, 100.88)
+[node name="ClimbableBlock27" parent="FinalClimb" instance=ExtResource("4_rdmge")]
+transform = Transform3D(0.604716, -2.47804, 0.549736, -0.723726, -2.94873, 0.0772345, 0.0415591, -0.238953, -0.10397, -2.68094, -46.6617, 1.55664)
 
-[node name="ClimbableBlock11" parent="." instance=ExtResource("4_rdmge")]
-transform = Transform3D(0.604716, -2.47804, 0.549736, 0.332473, -1.91162, -0.83176, 0.723726, 2.94873, -0.0772345, -0.891431, 34.3459, 101.837)
+[node name="ClimbableBlock28" parent="FinalClimb" instance=ExtResource("4_rdmge")]
+transform = Transform3D(0.604716, -2.47804, 0.549736, -0.723726, -2.94873, 0.0772345, 0.0415591, -0.238953, -0.10397, -1.86729, -47.6187, 1.64894)
 
 [connection signal="body_entered" from="Fall_Catcher" to="." method="_on_fall_catcher_body_entered"]
 [connection signal="body_exited" from="Fall_Catcher" to="." method="_on_fall_catcher_body_exited"]
