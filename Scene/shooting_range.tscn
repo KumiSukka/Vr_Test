@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d06lhoteum1k2"]
+[gd_scene load_steps=19 format=3 uid="uid://d06lhoteum1k2"]
 
 [ext_resource type="Script" path="res://Scene/main.gd" id="1_207uv"]
 [ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="3_o65ff"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bbgwpje78fyue" path="res://Assets/hide_whenplayer.tscn" id="11_qsi8k"]
 [ext_resource type="PackedScene" uid="uid://enw8j3habiox" path="res://Interfaces/ShootHint.tscn" id="12_qb08e"]
 [ext_resource type="Material" uid="uid://j1vxigs43e7a" path="res://Scene/billboard_material.tres" id="13_g7equ"]
+[ext_resource type="PackedScene" uid="uid://cqp0qkogqy2dk" path="res://Interfaces/return.tscn" id="14_cye6p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2sfld"]
 
@@ -227,6 +228,10 @@ scene = ExtResource("12_qb08e")
 viewport_size = Vector2(450, 200)
 material = ExtResource("13_g7equ")
 transparent = 2
+
+[node name="Viewport2Din3D2" parent="." instance=ExtResource("9_8bp2v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0628, 0.826893, -8.67255)
+scene = ExtResource("14_cye6p")
 
 [connection signal="child_exiting_tree" from="ROOM1" to="ROOM1" method="_on_child_exiting_tree"]
 [connection signal="child_exiting_tree" from="ROOM2" to="ROOM2" method="_on_child_exiting_tree"]
