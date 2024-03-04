@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://da0r3wica24uy"]
+[gd_scene load_steps=15 format=3 uid="uid://da0r3wica24uy"]
 
 [ext_resource type="Script" path="res://Scene/Climping.gd" id="1_nawu3"]
 [ext_resource type="MeshLibrary" uid="uid://dh013jkukc3tx" path="res://floorlib.tres" id="2_qt5kk"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://c0shcllq8y42y" path="res://Assets/climbable_block.tscn" id="4_rdmge"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="5_a6jkg"]
 [ext_resource type="PackedScene" uid="uid://c4ssnplclmaip" path="res://Interfaces/Victory_Menu.tscn" id="6_rtx32"]
+[ext_resource type="PackedScene" uid="uid://bbgwpje78fyue" path="res://Assets/hide_whenplayer.tscn" id="7_uyy34"]
+[ext_resource type="PackedScene" uid="uid://c3skpawl4u5gy" path="res://Interfaces/ClimpHint.tscn" id="8_kwqbe"]
+[ext_resource type="Material" uid="uid://j1vxigs43e7a" path="res://Scene/billboard_material.tres" id="9_pqme0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oj56g"]
 
@@ -277,6 +280,17 @@ collision_layer = 524289
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Detect_Player3"]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0.0505676, 1.42376, 0.619888)
 shape = SubResource("BoxShape3D_3s23b")
+
+[node name="Hide_whenplayer" parent="." instance=ExtResource("7_uyy34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.17466, 0, 6.70761)
+
+[node name="Viewport2Din3D" parent="Hide_whenplayer" instance=ExtResource("5_a6jkg")]
+transform = Transform3D(1, 0, 0, 0, 0.743318, 0, 0, 0, 1, 0, 2.49238, 0)
+enabled = false
+scene = ExtResource("8_kwqbe")
+viewport_size = Vector2(450, 200)
+material = ExtResource("9_pqme0")
+transparent = 2
 
 [connection signal="body_entered" from="Fall_Catcher" to="." method="_on_fall_catcher_body_entered"]
 [connection signal="body_exited" from="Fall_Catcher" to="." method="_on_fall_catcher_body_exited"]
