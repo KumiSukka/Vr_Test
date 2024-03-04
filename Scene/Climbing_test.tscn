@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="3_tctds"]
 [ext_resource type="PackedScene" uid="uid://c0shcllq8y42y" path="res://Assets/climbable_block.tscn" id="4_rdmge"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="5_a6jkg"]
-[ext_resource type="PackedScene" uid="uid://c4ssnplclmaip" path="res://Scene/Victory_Menu.tscn" id="6_rtx32"]
+[ext_resource type="PackedScene" uid="uid://c4ssnplclmaip" path="res://Interfaces/Victory_Menu.tscn" id="6_rtx32"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oj56g"]
 

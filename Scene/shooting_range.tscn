@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d03deb86l4xfs" path="res://Assets/toy_gun.tscn" id="7_rcxtf"]
 [ext_resource type="PackedScene" uid="uid://cj6utbl88v5b2" path="res://Assets/table_medium_2.tscn" id="8_7lku7"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="9_8bp2v"]
-[ext_resource type="PackedScene" uid="uid://c4ssnplclmaip" path="res://Scene/Victory_Menu.tscn" id="10_8oh3w"]
+[ext_resource type="PackedScene" uid="uid://c4ssnplclmaip" path="res://Interfaces/Victory_Menu.tscn" id="10_8oh3w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2sfld"]
 

@@ -40,3 +40,7 @@ func _process(delta):
 #With this timer we should get short cooldown with swapping stances hopefully a fixt to it spamming stances
 func _on_timer_timeout():
 	stance_cooldown = false
+
+
+func _on_start_up_timeout():
+	stanceSwap()
