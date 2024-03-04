@@ -289,6 +289,7 @@ transform = Transform3D(1, 0, 0, 0, 0.743318, 0, 0, 0, 1, 0, 2.49238, 0)
 enabled = false
 scene = ExtResource("8_kwqbe")
 viewport_size = Vector2(450, 200)
+input_keyboard = false
 material = ExtResource("9_pqme0")
 transparent = 2
 
