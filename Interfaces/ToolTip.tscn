@@ -1,34 +1,35 @@
-[gd_scene format=3 uid="uid://bva88scg56bha"]
+[gd_scene load_steps=3 format=3 uid="uid://bevka7d5hbi0j"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="GDScript" id="GDScript_7wrwi"]
+script/source = "extends Node3D
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_right = 448.0
-offset_bottom = 192.0
-color = Color(0.235294, 1, 0.788235, 0.470588)
+func _ready():
+	visible = false
 
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
-offset_right = 448.0
-offset_bottom = 192.0
 
-[node name="VSplitContainer" type="VSplitContainer" parent="CanvasLayer/CenterContainer"]
-layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VSplitContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Hint!"
-horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="CanvasLayer/CenterContainer/VSplitContainer"]
-layout_mode = 2
-text = "Press Y/B to swap stances, 
-you might have to press twice to it work"
+func _on_detectplayer_body_entered(body):
+	visible = true
+
+
+func _on_detectplayer_body_exited(body):
+	visible = false
+"
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_oys0v"]
+radius = 4.0
+
+[node name="tooltip" type="Node3D"]
+script = SubResource("GDScript_7wrwi")
+
+[node name="Detectplayer" type="Area3D" parent="."]
+collision_layer = 524288
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Detectplayer"]
+shape = SubResource("SphereShape3D_oys0v")
+
+[connection signal="body_entered" from="Detectplayer" to="." method="_on_detectplayer_body_entered"]
+[connection signal="body_exited" from="Detectplayer" to="." method="_on_detectplayer_body_exited"]
