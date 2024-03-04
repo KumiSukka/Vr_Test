@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=3 uid="uid://kcgtbhf0f78p"]
+
+[ext_resource type="Script" path="res://tooltip.gd" id="1_drytb"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="1_utw2u"]
+[ext_resource type="PackedScene" uid="uid://bva88scg56bha" path="res://Interfaces/ToolTip.tscn" id="3_qp5kq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o18kl"]
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_yi3m6"]
+resource_local_to_scene = true
+size = Vector2(3, 2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_kxcre"]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6k4f"]
+albedo_texture = SubResource("ViewportTexture_kxcre")
+billboard_mode = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ta6o"]
+resource_local_to_scene = true
+size = Vector3(3, 2, 0.02)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_oys0v"]
+radius = 4.0
+
+[node name="tooltip" type="Node3D"]
+script = ExtResource("1_drytb")
+
+[node name="Viewport2Din3D" parent="." instance=ExtResource("1_utw2u")]
+scene = ExtResource("3_qp5kq")
+viewport_size = Vector2(400, 190)
+material = SubResource("StandardMaterial3D_o18kl")
+
+[node name="Viewport" parent="Viewport2Din3D" index="0"]
+size = Vector2i(400, 190)
+
+[node name="Screen" parent="Viewport2Din3D" index="1"]
+mesh = SubResource("QuadMesh_yi3m6")
+surface_material_override/0 = SubResource("StandardMaterial3D_e6k4f")
+
+[node name="StaticBody3D" parent="Viewport2Din3D" index="2"]
+viewport_size = Vector2(400, 190)
+
+[node name="CollisionShape3D" parent="Viewport2Din3D/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_2ta6o")
+
+[node name="Detectplayer" type="Area3D" parent="."]
+collision_layer = 524288
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Detectplayer"]
+shape = SubResource("SphereShape3D_oys0v")
+
+[connection signal="body_entered" from="Detectplayer" to="." method="_on_detectplayer_body_entered"]
+[connection signal="body_exited" from="Detectplayer" to="." method="_on_detectplayer_body_exited"]
+
+[editable path="Viewport2Din3D"]
