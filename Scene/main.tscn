@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bqr6k6oay17kt"]
+[gd_scene load_steps=33 format=3 uid="uid://bqr6k6oay17kt"]
 
 [ext_resource type="Script" path="res://Scene/main.gd" id="1_lr665"]
 [ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="2_0veuu"]
@@ -19,6 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://sgtypnyrn7eg" path="res://Interfaces/menu.tscn" id="17_fx2se"]
 [ext_resource type="PackedScene" uid="uid://cuu24iorda2a" path="res://gun_snap_zone.tscn" id="18_5teid"]
 [ext_resource type="PackedScene" uid="uid://wgum7m2nuw3i" path="res://target.tscn" id="19_g6kjg"]
+[ext_resource type="PackedScene" uid="uid://bbgwpje78fyue" path="res://Assets/hide_whenplayer.tscn" id="20_sthgl"]
+[ext_resource type="PackedScene" uid="uid://bva88scg56bha" path="res://Interfaces/StanceHint.tscn" id="21_vus3e"]
+[ext_resource type="Material" uid="uid://j1vxigs43e7a" path="res://Scene/billboard_material.tres" id="22_smvwd"]
+[ext_resource type="PackedScene" uid="uid://enw8j3habiox" path="res://Interfaces/ShootHint.tscn" id="23_dbpaf"]
 
 [sub_resource type="Environment" id="Environment_7s6u7"]
 background_mode = 1
@@ -40,14 +44,14 @@ size = Vector2(100, 100)
 resource_local_to_scene = true
 size = Vector2(3, 2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_xxffr"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ub21j"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ip6b3"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewax8"]
 transparency = 1
 cull_mode = 2
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_xxffr")
+albedo_texture = SubResource("ViewportTexture_ub21j")
 texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wrkvx"]
@@ -59,9 +63,6 @@ points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_lr665")
-
-[node name="XROrigin3D" parent="." instance=ExtResource("2_0veuu")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10.1523, 0, -10.2912)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7s6u7")
@@ -221,7 +222,7 @@ size = Vector2i(600, 400)
 
 [node name="Screen" parent="Viewport2Din3D" index="1"]
 mesh = SubResource("QuadMesh_urr6x")
-surface_material_override/0 = SubResource("StandardMaterial3D_ip6b3")
+surface_material_override/0 = SubResource("StandardMaterial3D_ewax8")
 
 [node name="StaticBody3D" parent="Viewport2Din3D" index="2"]
 viewport_size = Vector2(600, 400)
@@ -247,6 +248,28 @@ shape = SubResource("ConvexPolygonShape3D_f0a82")
 
 [node name="Checkpoint" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.33429, 0, 0)
+
+[node name="Hide_whenplayer" parent="." instance=ExtResource("20_sthgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7588, 1.78167, 1.19976)
+
+[node name="Viewport2Din3D" parent="Hide_whenplayer" instance=ExtResource("16_v1hqa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.297926, 0)
+enabled = false
+scene = ExtResource("21_vus3e")
+viewport_size = Vector2(400, 180)
+material = ExtResource("22_smvwd")
+transparent = 0
+
+[node name="Hide_whenplayer2" parent="." instance=ExtResource("20_sthgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.88896, 1.48528, 8.04533)
+
+[node name="Viewport2Din3D" parent="Hide_whenplayer2" instance=ExtResource("16_v1hqa")]
+transform = Transform3D(1.43387, 0, 0, 0, 0.8, 0, 0, 0, 1, -1.33641, 0.490203, -0.333492)
+scene = ExtResource("23_dbpaf")
+viewport_size = Vector2(450, 180)
+material = ExtResource("22_smvwd")
+
+[node name="XROrigin3D" parent="." instance=ExtResource("2_0veuu")]
 
 [connection signal="body_entered" from="Fall_Catcher" to="." method="_on_fall_catcher_body_entered"]
 [connection signal="body_exited" from="Fall_Catcher" to="." method="_on_fall_catcher_body_exited"]

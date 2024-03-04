@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://j1vxigs43e7a"]
+
+[resource]
+disable_receive_shadows = true
+billboard_mode = 2
+billboard_keep_scale = true
