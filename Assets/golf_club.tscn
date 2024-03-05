@@ -59,9 +59,9 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_vofye")
 
 [node name="GrabPointHandLeft" parent="." instance=ExtResource("2_bnaou")]
-transform = Transform3D(-0.999968, 0.000228664, 0.00793798, 0.00740206, -0.335206, 0.942116, 0.00287628, 0.942145, 0.335194, 0.0488153, 1.69505, 0.0105919)
+transform = Transform3D(-0.999968, 0.000228664, 0.00793798, 0.00740206, -0.335206, 0.942116, 0.00287628, 0.942145, 0.335194, 0.0488153, 1.49505, 0.0105919)
 visible = true
 
 [node name="GrabPointHandRight" parent="." instance=ExtResource("3_crm2b")]
-transform = Transform3D(-0.999968, 0.000228664, 0.00793798, 0.00740207, -0.335206, 0.942116, 0.00287628, 0.942145, 0.335194, -0.0437531, 1.69628, 0.0114405)
+transform = Transform3D(-0.999968, 0.000228664, 0.00793798, 0.00740207, -0.335206, 0.942116, 0.00287628, 0.942145, 0.335194, -0.0437531, 1.49628, 0.0114405)
 visible = true
