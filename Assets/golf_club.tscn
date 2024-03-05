@@ -43,10 +43,11 @@ points = PackedVector3Array(-1.33514e-05, 0.29782, 0.394138, -0.0125667, 0.29666
 
 [node name="Golf_Club" type="RigidBody3D"]
 collision_layer = 4
-collision_mask = 196615
+collision_mask = 16973831
 freeze = true
 script = ExtResource("1_dhqlc")
 press_to_hold = false
+picked_up_layer = 16842752
 release_mode = 1
 
 [node name="club" type="MeshInstance3D" parent="."]
