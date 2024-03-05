@@ -45,14 +45,14 @@ size = Vector2(100, 100)
 resource_local_to_scene = true
 size = Vector2(3, 2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_mndm1"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_60ljg"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cvnvs"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m0kp2"]
 transparency = 1
 cull_mode = 2
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_mndm1")
+albedo_texture = SubResource("ViewportTexture_60ljg")
 texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wrkvx"]
@@ -223,7 +223,7 @@ size = Vector2i(600, 400)
 
 [node name="Screen" parent="Viewport2Din3D" index="1"]
 mesh = SubResource("QuadMesh_urr6x")
-surface_material_override/0 = SubResource("StandardMaterial3D_cvnvs")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0kp2")
 
 [node name="StaticBody3D" parent="Viewport2Din3D" index="2"]
 viewport_size = Vector2(600, 400)
@@ -276,7 +276,7 @@ transparent = 2
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Golf_Club" parent="." instance=ExtResource("24_837gr")]
-transform = Transform3D(0.992349, -0.123463, 0, 0.123463, 0.992349, 0, 0, 0, 1, 0.73217, 0.0776211, 1.986)
+transform = Transform3D(2.98023e-08, -1, 0, 1, 2.98023e-08, 0, 0, 0, 1, 0.659875, 1.56725, 1.92949)
 
 [connection signal="body_entered" from="Fall_Catcher" to="." method="_on_fall_catcher_body_entered"]
 [connection signal="body_exited" from="Fall_Catcher" to="." method="_on_fall_catcher_body_exited"]
