@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bqr6k6oay17kt"]
+[gd_scene load_steps=34 format=3 uid="uid://bqr6k6oay17kt"]
 
 [ext_resource type="Script" path="res://Scene/main.gd" id="1_lr665"]
 [ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="2_0veuu"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://bva88scg56bha" path="res://Interfaces/StanceHint.tscn" id="21_vus3e"]
 [ext_resource type="Material" uid="uid://j1vxigs43e7a" path="res://Scene/billboard_material.tres" id="22_smvwd"]
 [ext_resource type="PackedScene" uid="uid://enw8j3habiox" path="res://Interfaces/ShootHint.tscn" id="23_dbpaf"]
+[ext_resource type="PackedScene" uid="uid://drs6mb2fyr2wx" path="res://Assets/golf_club.tscn" id="24_837gr"]
 
 [sub_resource type="Environment" id="Environment_7s6u7"]
 background_mode = 1
@@ -44,14 +45,14 @@ size = Vector2(100, 100)
 resource_local_to_scene = true
 size = Vector2(3, 2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_xdcjy"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_mndm1"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v74rd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cvnvs"]
 transparency = 1
 cull_mode = 2
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_xdcjy")
+albedo_texture = SubResource("ViewportTexture_mndm1")
 texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wrkvx"]
@@ -222,7 +223,7 @@ size = Vector2i(600, 400)
 
 [node name="Screen" parent="Viewport2Din3D" index="1"]
 mesh = SubResource("QuadMesh_urr6x")
-surface_material_override/0 = SubResource("StandardMaterial3D_v74rd")
+surface_material_override/0 = SubResource("StandardMaterial3D_cvnvs")
 
 [node name="StaticBody3D" parent="Viewport2Din3D" index="2"]
 viewport_size = Vector2(600, 400)
@@ -272,6 +273,10 @@ material = ExtResource("22_smvwd")
 transparent = 2
 
 [node name="XROrigin3D" parent="." instance=ExtResource("2_0veuu")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Golf_Club" parent="." instance=ExtResource("24_837gr")]
+transform = Transform3D(0.992349, -0.123463, 0, 0.123463, 0.992349, 0, 0, 0, 1, 0.73217, 0.0776211, 1.986)
 
 [connection signal="body_entered" from="Fall_Catcher" to="." method="_on_fall_catcher_body_entered"]
 [connection signal="body_exited" from="Fall_Catcher" to="." method="_on_fall_catcher_body_exited"]
