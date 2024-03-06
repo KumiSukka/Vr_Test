@@ -1,4 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1uhc82nb5pes"]
+[gd_scene load_steps=5 format=3 uid="uid://c1uhc82nb5pes"]
+
+[ext_resource type="Script" path="res://Assets/golf_ball.gd" id="1_jq665"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_onn6p"]
+friction = 0.3
+rough = true
+bounce = 0.4
 
 [sub_resource type="SphereMesh" id="SphereMesh_7sfgf"]
 
@@ -9,6 +16,9 @@ radius = 0.0731765
 collision_layer = 16777217
 collision_mask = 16777217
 mass = 0.5
+physics_material_override = SubResource("PhysicsMaterial_onn6p")
+continuous_cd = true
+script = ExtResource("1_jq665")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
