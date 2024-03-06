@@ -1,17 +1,30 @@
 extends RigidBody3D
 
-@export var max_speed = 8
+@export var max_speed = 4
 @export var accel = 5
 var velocity : Vector3
 var speed : Vector3
 var direction : Vector3
+var can_get_hit = true
+@onready var timer = $Timer
+
+
 
 
 func _physics_process(delta):
-	speed = - (direction * accel).limit_length(max_speed)
-	shoot(speed)
+	var collision_info = move_and_collide(velocity * delta)
+	if collision_info && can_get_hit:
+		apply_impulse(collision_info.get_normal() / max_speed)
+		can_get_hit = false
+		timer.start()
+		collision_layer
+		
+	else:
+		pass
 	
-func shoot(vector:Vector3):
-	velocity = Vector3(vector.x,0, vector.z)
-	
-	self.apply_impulse(velocity, Vector3.ZERO)
+
+
+
+func _on_timer_timeout():
+	can_get_hit = true
+	pass

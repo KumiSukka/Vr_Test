@@ -5,7 +5,8 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_onn6p"]
 friction = 0.3
 rough = true
-bounce = 0.4
+bounce = 0.5
+absorbent = true
 
 [sub_resource type="SphereMesh" id="SphereMesh_7sfgf"]
 
@@ -17,6 +18,7 @@ collision_layer = 16777217
 collision_mask = 16777217
 mass = 0.5
 physics_material_override = SubResource("PhysicsMaterial_onn6p")
+gravity_scale = 2.0
 continuous_cd = true
 script = ExtResource("1_jq665")
 
@@ -27,3 +29,7 @@ mesh = SubResource("SphereMesh_7sfgf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_hk3ku")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
