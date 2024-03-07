@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbl2l0xas84u6"]
-
-[ext_resource type="PackedScene" uid="uid://c0shcllq8y42y" path="res://Assets/climbable_block.tscn" id="1_bvtv3"]
-
-[node name="ClimbableBlockLong" instance=ExtResource("1_bvtv3")]
-collision_layer = 262144
