@@ -13,6 +13,7 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+.addons/
 addons/mesh_slicer/ConcaveMeshSlicer.gd
 addons/mesh_slicer/LICENSE
 addons/mesh_slicer/README.md
