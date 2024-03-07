@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-@export var max_speed = 4
+@export var max_speed = 2
 @export var accel = 5
 var velocity : Vector3
 var speed : Vector3

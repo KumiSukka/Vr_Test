@@ -31,6 +31,6 @@ mesh = SubResource("SphereMesh_7sfgf")
 shape = SubResource("SphereShape3D_hk3ku")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.3
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

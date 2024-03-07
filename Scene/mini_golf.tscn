@@ -11,8 +11,7 @@
 
 [sub_resource type="Environment" id="Environment_s5k5m"]
 background_mode = 1
-background_color = Color(0.811765, 0.901961, 0.913725, 1)
-background_energy_multiplier = 0.95
+background_color = Color(0.717647, 0.901961, 0.913725, 1)
 
 [node name="MiniGolf" type="Node3D"]
 script = ExtResource("1_r5qde")
@@ -50,8 +49,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.6312, 0.328637, 3.29832)
 environment = SubResource("Environment_s5k5m")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.707107, 0.457651, -0.539032, 0.707107, -0.457651, 0.539032, 0, -0.762307, -0.647216, 0, 20.3456, -2.67642)
+transform = Transform3D(0.533127, 0.547567, -0.644938, 0.835988, -0.223816, 0.50103, 0.13, -0.806273, -0.577082, 0, 4.3456, -2.67642)
+light_color = Color(1, 0.705882, 1, 1)
+light_energy = 0.752
 shadow_enabled = true
+sky_mode = 1
 
 [node name="Viewport2Din3D" parent="." instance=ExtResource("7_k2ex4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23263, -30.4957)

@@ -47,6 +47,7 @@ size = Vector3(0.0944519, 0.171751, 0.217163)
 [node name="Golf_Club" type="RigidBody3D"]
 collision_layer = 4
 collision_mask = 16973831
+gravity_scale = 0.3
 freeze = true
 script = ExtResource("1_rvrig")
 press_to_hold = false
