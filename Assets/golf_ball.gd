@@ -15,7 +15,7 @@ func _physics_process(delta):
 	var collision_info = move_and_collide(velocity * delta)
 	if collision_info && can_get_hit:
 		print("osui")
-		apply_impulse(collision_info.get_normal() / max_speed)
+		apply_impulse(collision_info.get_normal())
 		can_get_hit = false
 		set_collision_layer_value ( 25, false )
 		set_collision_mask_value ( 25, false )
