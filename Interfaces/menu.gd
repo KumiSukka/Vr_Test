@@ -13,3 +13,7 @@ func _change_to_range():
 func _on_button_2_pressed():
 	print("tp_to_climbing")
 	get_tree().change_scene_to_file("res://Scene/Climbing_test.tscn")
+
+
+func _on_button_3_pressed():
+	get_tree().change_scene_to_file("res://Scene/mini_golf.tscn")
