@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu3gne4jrq2iu"]
+
+[ext_resource type="Script" path="res://Scene/Slicing_xr.gd" id="1_u6arv"]
+
+[sub_resource type="Environment" id="Environment_jwm04"]
+
+[node name="MeshSlicing" type="Node3D"]
+script = ExtResource("1_u6arv")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jwm04")

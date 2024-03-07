@@ -2,7 +2,8 @@ extends Node3D
 
 
 @onready var player = $XROrigin3D
-@onready var returnpoint = $Checkpoint
+
+var mesh_slicer = MeshSlicer.new()
 var xr_interface: XRInterface
 
 
@@ -21,13 +22,3 @@ func _ready():
 	else:
 		print("OpenXR not initialized, please check if your headset is connected")
 
-
-
-func _on_fall_catcher_body_entered(body):
-	print(body)
-	
-
-
-func _on_fall_catcher_body_exited(body):
-	print(body)
-	player.global_position = returnpoint.global_position
