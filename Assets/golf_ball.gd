@@ -17,7 +17,6 @@ func _physics_process(delta):
 		apply_impulse(collision_info.get_normal() / max_speed)
 		can_get_hit = false
 		timer.start()
-		collision_layer
 		
 	else:
 		pass
