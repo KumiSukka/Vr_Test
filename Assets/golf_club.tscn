@@ -54,26 +54,27 @@ picked_up_layer = 16842752
 release_mode = 1
 
 [node name="club" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 mesh = SubResource("ArrayMesh_tv2ts")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+[node name="bat" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_vofye")
 
 [node name="GrabPointHandLeft" parent="." instance=ExtResource("2_bnaou")]
-transform = Transform3D(-0.999968, 0.000228664, 0.00793798, 0.00740206, -0.335206, 0.942116, 0.00287628, 0.942145, 0.335194, 0.0488153, 1.49505, 0.0105919)
+transform = Transform3D(-0.999968, 0.000228664, 0.00793798, 0.00740206, -0.335206, 0.942116, 0.00287628, 0.942145, 0.335194, 0.0488153, 1.28307, 0.0105919)
 visible = true
 
 [node name="GrabPointHandRight" parent="." instance=ExtResource("3_crm2b")]
-transform = Transform3D(-0.999968, 0.000228664, 0.00793798, 0.00740207, -0.335206, 0.942116, 0.00287628, 0.942145, 0.335194, -0.0437531, 1.49628, 0.0114405)
+transform = Transform3D(-0.999968, 0.000228664, 0.00793798, 0.00740207, -0.335206, 0.942116, 0.00287628, 0.942145, 0.335194, -0.0437531, 1.2843, 0.0114405)
 visible = true
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+[node name="hitbox" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.29789, -0.0741084, 0, 0.0741084, 1.29789, 0, 0, 0, 1.3, -0.0269356, 0.115213, 0.086853)
 shape = SubResource("BoxShape3D_mwtye")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

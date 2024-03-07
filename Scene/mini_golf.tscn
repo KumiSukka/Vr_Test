@@ -5,8 +5,8 @@
 [ext_resource type="MeshLibrary" uid="uid://dh013jkukc3tx" path="res://floorlib.tres" id="2_m6jy0"]
 [ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="3_wethw"]
 [ext_resource type="PackedScene" uid="uid://c1uhc82nb5pes" path="res://Assets/golf_ball.tscn" id="4_3120b"]
-[ext_resource type="PackedScene" uid="uid://dwcto1ex7el7a" path="res://Assets/golf_club.glb" id="5_q8o6r"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="7_k2ex4"]
+[ext_resource type="PackedScene" uid="uid://drs6mb2fyr2wx" path="res://Assets/golf_club.tscn" id="8_aoai7"]
 [ext_resource type="PackedScene" uid="uid://cqp0qkogqy2dk" path="res://Interfaces/return.tscn" id="8_octlk"]
 
 [sub_resource type="Environment" id="Environment_s5k5m"]
@@ -45,9 +45,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8449, -0.388404, 1.9662)
 [node name="Golf_Ball3" parent="." instance=ExtResource("4_3120b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.8452, -0.388404, 1.9662)
 
-[node name="golf_club" parent="." instance=ExtResource("5_q8o6r")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 2.27519)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_s5k5m")
 
@@ -58,3 +55,6 @@ shadow_enabled = true
 [node name="Viewport2Din3D" parent="." instance=ExtResource("7_k2ex4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0925041, -30.4957)
 scene = ExtResource("8_octlk")
+
+[node name="Golf_Club" parent="." instance=ExtResource("8_aoai7")]
+transform = Transform3D(-0.999998, 0, -0.00207701, 0, 1, 0, 0.00207701, 0, -0.999998, 1.10553, 0, 2.45384)
