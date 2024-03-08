@@ -1,11 +1,59 @@
-[gd_scene load_steps=3 format=3 uid="uid://cu3gne4jrq2iu"]
+[gd_scene load_steps=9 format=3 uid="uid://cu3gne4jrq2iu"]
 
 [ext_resource type="Script" path="res://Scene/Slicing_xr.gd" id="1_u6arv"]
+[ext_resource type="MeshLibrary" uid="uid://dh013jkukc3tx" path="res://floorlib.tres" id="2_mfyeu"]
+[ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="4_ig057"]
+[ext_resource type="PackedScene" uid="uid://dwcto1ex7el7a" path="res://Assets/golf_club.glb" id="5_jbs4g"]
 
 [sub_resource type="Environment" id="Environment_jwm04"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bke40"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_objj2"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.65098, 0.0941176, 0.490196, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_hc8oy"]
+material = SubResource("StandardMaterial3D_objj2")
 
 [node name="MeshSlicing" type="Node3D"]
 script = ExtResource("1_u6arv")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jwm04")
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 7)
+mesh_library = ExtResource("2_mfyeu")
+data = {
+"cells": PackedInt32Array(0, 1, 0, 65534, 1, 0, 65534, 65535, 0, 0, 65535, 0, 2, 65535, 0, 2, 1, 0, 2, 3, 0, 0, 3, 0, 65534, 3, 0, 65534, 65533, 0, 0, 65533, 0, 2, 65533, 0, 4, 65533, 0, 4, 65535, 0, 4, 1, 0, 4, 3, 0, 65526, 65533, 0, 65526, 65535, 0, 65526, 1, 0, 65526, 3, 0, 65528, 65533, 0, 65528, 65535, 0, 65528, 1, 0, 65528, 3, 0, 65530, 65533, 0, 65530, 65535, 0, 65530, 1, 0, 65530, 3, 0, 65532, 65533, 0, 65532, 65535, 0, 65532, 1, 0, 65532, 3, 0, 65526, 65525, 0, 65526, 65527, 0, 65526, 65529, 0, 65526, 65531, 0, 65528, 65525, 0, 65528, 65527, 0, 65528, 65529, 0, 65528, 65531, 0, 65530, 65525, 0, 65530, 65527, 0, 65530, 65529, 0, 65530, 65531, 0, 65532, 65525, 0, 65532, 65527, 0, 65532, 65529, 0, 65532, 65531, 0, 65534, 65525, 0, 65534, 65527, 0, 65534, 65529, 0, 65534, 65531, 0, 0, 65525, 0, 0, 65527, 0, 0, 65529, 0, 0, 65531, 0, 2, 65525, 0, 2, 65527, 0, 2, 65529, 0, 2, 65531, 0, 4, 65525, 0, 4, 65527, 0, 4, 65529, 0, 4, 65531, 0)
+}
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 3.14561, 0, 0, 0, 1, -0.729351, 3.74837, -1.2218)
+mesh = SubResource("BoxMesh_bke40")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 3.14561, 0, 0, 0, 1, -0.729351, 6.74837, -1.2218)
+visible = false
+mesh = SubResource("BoxMesh_bke40")
+skeleton = NodePath("")
+
+[node name="XROrigin3D" parent="." instance=ExtResource("4_ig057")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.20446, 7.43843)
+
+[node name="golf_club" parent="." instance=ExtResource("5_jbs4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.03325, 2, 5.22767)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.04724, 0, 0, 0, 0.463644, 0.803544, 0, -1.37436, 0.271078, -0.69776, 4.58919, -1.17851)
+mesh = SubResource("QuadMesh_hc8oy")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
