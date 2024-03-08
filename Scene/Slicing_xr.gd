@@ -96,9 +96,6 @@ func slice_automatic():
 				#adjust the rigidbody center of mass
 				body2.center_of_mass = body2.to_local(meshinstance.to_global(calculate_center_of_mass(meshes[1])))
 
-func _on_timer_timeout():
-	slice_automatic()
-
 func calculate_center_of_mass(mesh:ArrayMesh):
 	#Not sure how well this work
 	var meshVolume = 0
@@ -117,3 +114,7 @@ func calculate_center_of_mass(mesh:ArrayMesh):
 		return Vector3.ZERO
 	return temp / meshVolume
 
+
+
+func _on_slicer_action_pressed(pickable):
+	slice_automatic()
