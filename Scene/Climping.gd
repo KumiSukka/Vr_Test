@@ -24,8 +24,8 @@ func _ready():
 		get_viewport().use_xr = true
 	else:
 		print("OpenXR not initialized, please check if your headset is connected")
-	current_return = returnpoint.global_position
 
+	
 
 
 func _on_fall_catcher_body_entered(body):
@@ -41,16 +41,19 @@ func _on_fall_catcher_body_exited(body):
 
 
 func _on_detect_player_body_entered(body):
+	print(body)
 	current_return = returnpoint.global_position
 	print(current_return)
 	
 
 
 func _on_detect_player_2_body_entered(body):
+	print(body)
 	current_return = returnpoint2.global_position
 	print(current_return)
 
 
 func _on_detect_player_3_body_entered(body):
+	print(body)
 	current_return = returnpoint3.global_position
 	print(current_return)

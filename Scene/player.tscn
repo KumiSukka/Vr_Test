@@ -1,5 +1,6 @@
-[gd_scene load_steps=100 format=3 uid="uid://br7wshv6lvv7u"]
+[gd_scene load_steps=101 format=3 uid="uid://br7wshv6lvv7u"]
 
+[ext_resource type="Script" path="res://Scene/player.gd" id="1_1v7rm"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="1_3tavg"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="2_0tx5f"]
 [ext_resource type="PackedScene" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="2_tpqb8"]
@@ -231,6 +232,7 @@ nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1", &"output", 0, &"Grip"]
 
 [node name="XROrigin3D" type="XROrigin3D"]
+script = ExtResource("1_1v7rm")
 
 [node name="PlayerBody" parent="." instance=ExtResource("1_3tavg")]
 collision_layer = 2148007936

@@ -102,8 +102,6 @@ func slice_automatic():
 					
 				#adjust the rigidbody center of mass
 				body2.center_of_mass = body2.to_local(meshinstance.to_global(calculate_center_of_mass(meshes[1])))
-			else:
-				pass
 
 func calculate_center_of_mass(mesh:ArrayMesh):
 	#Not sure how well this work

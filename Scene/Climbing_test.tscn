@@ -30,7 +30,7 @@ points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
 script = ExtResource("1_nawu3")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("3_tctds")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.841724, 0.783316, -0.691299)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.69781, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xbenj")
@@ -264,7 +264,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9049, 23.056, 73.6593)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.96599, 29.6894, 91.9122)
 
 [node name="Detect_Player" type="Area3D" parent="."]
-collision_layer = 524289
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.374335, 0, 0, 6.1333)
+collision_layer = 2148007936
+collision_mask = 2148007936
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Detect_Player"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.719857, 3.42376, 0.829187)
@@ -272,7 +274,8 @@ shape = SubResource("BoxShape3D_3s23b")
 
 [node name="Detect_Player2" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 22.8309, 73.4899)
-collision_layer = 524289
+collision_layer = 2148007936
+collision_mask = 2148007936
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Detect_Player2"]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0.230176, 2.42376, 0.417435)
@@ -280,7 +283,8 @@ shape = SubResource("BoxShape3D_3s23b")
 
 [node name="Detect_Player3" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 29.8309, 91.4899)
-collision_layer = 524289
+collision_layer = 2148007936
+collision_mask = 2148007936
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Detect_Player3"]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0.0505676, 1.42376, 0.619888)
