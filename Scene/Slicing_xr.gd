@@ -48,6 +48,8 @@ func slice_automatic():
 				Transform.basis.x = meshinstance.to_local((slicer.global_transform.basis.x+body.global_position))
 				Transform.basis.y = meshinstance.to_local((slicer.global_transform.basis.y+body.global_position))
 				Transform.basis.z = meshinstance.to_local((slicer.global_transform.basis.z+body.global_position))
+				
+				#Change freeze of if enabled
 
 				
 
@@ -79,6 +81,11 @@ func slice_automatic():
 				meshinstance = body2.get_node("MeshInstance3D")
 				collision = body2.get_node("CollisionShape3D")
 				meshinstance.mesh = meshes[1]
+				
+				if body2.freeze == true:
+					body2.freeze = false
+				else:
+					pass
 				
 				#generate collision
 				if len(meshes[1].get_faces()) > 2:
@@ -114,6 +121,10 @@ func calculate_center_of_mass(mesh:ArrayMesh):
 		return Vector3.ZERO
 	return temp / meshVolume
 
+func _physics_process(delta):
+	if Input.is_action_just_pressed("key_pressed"):
+		slice_automatic()
+		
 
 
 func _on_slicer_action_pressed(pickable):
