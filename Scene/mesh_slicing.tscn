@@ -309,6 +309,51 @@ skeleton = NodePath("")
 transform = Transform3D(0.218615, 0, 0, 0, 0.218615, 0, 0, 0, 0.218615, 0, -0.425185, 0)
 shape = SubResource("ConvexPolygonShape3D_jurfg")
 
+[node name="RigidBody3D5" type="RigidBody3D" parent="RigidBodys"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.929166, 1.66234, -39.1129)
+collision_layer = 2147483649
+collision_mask = 2147483649
+mass = 60.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBodys/RigidBody3D5"]
+transform = Transform3D(0.218615, 0, 0, 0, 0.218615, 0, 0, 0, 0.218615, 0, -0.425185, 0)
+mesh = SubResource("ArrayMesh_1rihs")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBodys/RigidBody3D5"]
+transform = Transform3D(0.218615, 0, 0, 0, 0.218615, 0, 0, 0, 0.218615, 0, -0.425185, 0)
+shape = SubResource("ConvexPolygonShape3D_jurfg")
+
+[node name="RigidBody3D6" type="RigidBody3D" parent="RigidBodys"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.929166, 6.07872, -39.1129)
+collision_layer = 2147483649
+collision_mask = 2147483649
+mass = 60.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBodys/RigidBody3D6"]
+transform = Transform3D(0.218615, 0, 0, 0, 0.218615, 0, 0, 0, 0.218615, 0, -0.425185, 0)
+mesh = SubResource("ArrayMesh_1rihs")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBodys/RigidBody3D6"]
+transform = Transform3D(0.218615, 0, 0, 0, 0.218615, 0, 0, 0, 0.218615, 0, -0.425185, 0)
+shape = SubResource("ConvexPolygonShape3D_jurfg")
+
+[node name="RigidBody3D7" type="RigidBody3D" parent="RigidBodys"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.929166, 10.0984, -39.1129)
+collision_layer = 2147483649
+collision_mask = 2147483649
+mass = 60.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBodys/RigidBody3D7"]
+transform = Transform3D(0.218615, 0, 0, 0, 0.218615, 0, 0, 0, 0.218615, 0, -0.425185, 0)
+mesh = SubResource("ArrayMesh_1rihs")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBodys/RigidBody3D7"]
+transform = Transform3D(0.218615, 0, 0, 0, 0.218615, 0, 0, 0, 0.218615, 0, -0.425185, 0)
+shape = SubResource("ConvexPolygonShape3D_jurfg")
+
 [node name="RigidBody3D3" type="RigidBody3D" parent="RigidBodys"]
 transform = Transform3D(-1, -8.74162e-08, 1.08026e-09, 0, 0.0123567, 0.999924, -8.74228e-08, 0.999924, -0.0123567, -7.70871, 5.41521, -32.2816)
 collision_layer = 2147483649
@@ -321,6 +366,20 @@ mesh = SubResource("ArrayMesh_iwj6y")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBodys/RigidBody3D3"]
+shape = SubResource("ConvexPolygonShape3D_ha1v7")
+
+[node name="RigidBody3D4" type="RigidBody3D" parent="RigidBodys"]
+transform = Transform3D(5.95464e-08, -0.999492, -0.0318642, 2.63526e-09, -0.0318642, 0.999492, -1, -7.45058e-08, 1.39698e-09, -0.97845, 14.1815, -39.1565)
+collision_layer = 2147483649
+collision_mask = 2147483649
+mass = 30.0
+center_of_mass_mode = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBodys/RigidBody3D4"]
+mesh = SubResource("ArrayMesh_iwj6y")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBodys/RigidBody3D4"]
 shape = SubResource("ConvexPolygonShape3D_ha1v7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
