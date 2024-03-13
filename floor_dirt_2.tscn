@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://d203bkpl2b3dl"]
+[gd_scene load_steps=42 format=3 uid="uid://d203bkpl2b3dl"]
 
 [ext_resource type="PackedScene" uid="uid://dd7bp22e8tx5f" path="res://addons/kaykit_prototype_bits/Assets/gltf/Floor_Dirt.gltf" id="1_wjvpx"]
 [ext_resource type="ArrayMesh" uid="uid://b3ueuxj3ymqik" path="res://addons/kaykit_prototype_bits/Assets/obj/Wall_Doorway.obj" id="3_8w50j"]
@@ -20,6 +20,7 @@
 [ext_resource type="ArrayMesh" uid="uid://co7dnikxi4nkn" path="res://addons/kaykit_dungeon_remastered/Assets/obj/pillar.obj" id="18_btq28"]
 [ext_resource type="ArrayMesh" uid="uid://clivyqgncn3rv" path="res://addons/kaykit_dungeon_remastered/Assets/obj/wall_sloped.obj" id="19_q4u4g"]
 [ext_resource type="ArrayMesh" uid="uid://gqtu6ohjd2ak" path="res://addons/kaykit_dungeon_remastered/Assets/obj/wall_endcap.obj" id="20_c6jl0"]
+[ext_resource type="ArrayMesh" uid="uid://wr0h7tyw43a7" path="res://addons/kaykit_dungeon_remastered/Assets/obj/floor_wood_large.obj" id="21_krak6"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5reu1"]
 points = PackedVector3Array(-2, 0, -2, -2, 0, 1.99995, -2, 0.39999, -2, 2, 0, -2, -2, 0.39999, 1.99995, 2, 0, 1.99995, -1.90016, 0.499962, -1.90016, 2, 0.39999, -2, -1.90016, 0.499962, 1.89972, 2, 0.39999, 1.99995, -1.37784, 0.529948, -1.6253, -1.25724, 0.529948, -1.67072, 1.89977, 0.499962, -1.90016, -1.00196, 0.529948, 1.58531, -1.11355, 0.529948, 1.52149, 1.89977, 0.499962, 1.89972, -1.03759, 0.53, 0.252908, 1.02232, 0.53, -1.41426, 1.2224, 0.53, -1.40369, 1.33712, 0.529948, -1.14332, 1.38254, 0.529948, -1.02311, -0.978074, 0.53, 0.438888, 1.07948, 0.529948, 1.57591, 1.1993, 0.529948, 1.52971)
@@ -280,3 +281,6 @@ mesh = ExtResource("20_c6jl0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_wfkkm")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." index="20"]
+mesh = ExtResource("21_krak6")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxgo05yg6hscb"
+path="res://.godot/imported/pillar_purple2.obj-cfd45c51a73fa80b012465993999fd3c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pillar_purple2.obj-cfd45c51a73fa80b012465993999fd3c.mesh"]
+
+source_file="res://pillar_purple2.obj"
+dest_files=["res://.godot/imported/pillar_purple2.obj-cfd45c51a73fa80b012465993999fd3c.mesh", "res://.godot/imported/pillar_purple2.obj-cfd45c51a73fa80b012465993999fd3c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
