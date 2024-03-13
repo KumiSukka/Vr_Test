@@ -10,11 +10,7 @@ extends Node3D
 @export var shatter:bool = false
 
 
-#Test script for exploding bottle
-func _process(_delta):
-	if Input.is_action_just_pressed("Test"): #test key is k 
-		#Löydä tähän millä kakka imputilla saat sen toimimaan olkoon se tyyliin tarpeeksi nopea hajoaa tai sitten jos pelaaja releasee seuraava collission hajoaa
-		explode()
+
 
 
 #Script for exploding the bottles
