@@ -20,28 +20,25 @@ offset_bottom = 177.0
 layout_mode = 2
 alignment = 1
 
-[node name="1" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="but1" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Teleport to 
 shooting range test"
 
-[node name="2" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="but2" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Teleport to
 Glimbing challenge"
 
-[node name="3" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="but3" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Teleport to minigolf"
 
-[node name="4" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="but4" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Teleport to Mesh Slicing"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/1" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/1" to="." method="_on__pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/2" to="." method="_on__pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/3" to="." method="_on__pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/4" to="." method="_on__pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/but1" to="." method="_on_but_1_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/but2" to="." method="_on_but_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/but3" to="." method="_on_but_3_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/but4" to="." method="_on_but_4_pressed"]
