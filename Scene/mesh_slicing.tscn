@@ -614,7 +614,6 @@ viewport_size = Vector2(420, 200)
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 61.0052, 13.0671, -71.0303)
 light_color = Color(1, 1, 0.85098, 1)
 light_energy = 4.205
-shadow_enabled = true
 spot_range = 9.32815
 spot_angle = 43.8111
 
@@ -632,10 +631,12 @@ shadow_reverse_cull_face = true
 spot_range = 33.0572
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 11.4888, 23.4078, -52.7148)
-light_energy = 5.0
+transform = Transform3D(1, 0, 0, 0, 0.07289, 0.99734, 0, -0.99734, 0.07289, 11.4888, 24.6527, -52.7148)
+light_energy = 4.38
 shadow_enabled = true
-spot_range = 31.0497
+shadow_bias = 0.379
+spot_range = 24.3208
+spot_angle = 59.1646
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.63964, 0.768674, 0, -0.768674, 0.63964, 40.4202, 28.281, -44.525)
