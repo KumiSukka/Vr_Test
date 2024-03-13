@@ -17,3 +17,7 @@ func _on_button_2_pressed():
 
 func _on_button_3_pressed():
 	get_tree().change_scene_to_file("res://Scene/mini_golf.tscn")
+
+
+func _on__pressed():
+	get_tree().change_scene_to_file("res://Scene/mesh_slicing.tscn")
