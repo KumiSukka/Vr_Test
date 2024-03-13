@@ -493,7 +493,9 @@ shape = SubResource("ConvexPolygonShape3D_lc661")
 transform = Transform3D(-0.0225885, -0.556571, -0.830493, -0.0151326, 0.8308, -0.556365, 0.99963, 0, -0.0271889, 38.2709, 14.5726, -57.0126)
 collision_layer = 2147483649
 collision_mask = 2147483649
-mass = 30.0
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+mass = 10.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBodys/RigidBody3D15"]
 mesh = ExtResource("9_d50i3")
