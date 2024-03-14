@@ -35,13 +35,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.6
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xbenj")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.964139, 0.195105, -0.179918, 0.253095, -0.471907, 0.844539, 0.0798697, -0.859789, -0.504364, 0, 16, 0)
-light_energy = 1.14
-light_indirect_energy = 2.026
-light_volumetric_fog_energy = 1.61
-shadow_enabled = true
-
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("2_qt5kk")
 cell_size = Vector3(2, 1, 2)
@@ -305,6 +298,10 @@ transparent = 2
 [node name="Viewport2Din3D2" parent="." instance=ExtResource("5_a6jkg")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 20.8066, 51.4729)
 scene = ExtResource("6_c75dx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.983994, -0.0690357, 0.164285, -0.178201, -0.381202, 0.907154, 0, -0.92191, -0.387403, 0, 0, 0)
+shadow_enabled = true
 
 [connection signal="body_entered" from="Fall_Catcher" to="." method="_on_fall_catcher_body_entered"]
 [connection signal="body_exited" from="Fall_Catcher" to="." method="_on_fall_catcher_body_exited"]

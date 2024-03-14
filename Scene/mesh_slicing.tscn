@@ -567,6 +567,14 @@ mesh = ExtResource("12_7ia1t")
 transform = Transform3D(0.999998, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_4kljg")
 
+[node name="key" parent="RigidBodys" instance=ExtResource("9_kd5na")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.6202, 12.5811, -64.1825)
+collision_layer = 2164391940
+collision_mask = 2164457479
+freeze = true
+script = ExtResource("18_rrfyh")
+release_mode = 0
+
 [node name="RigidBody3D" type="RigidBody3D" parent="RigidBodys"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.9985, 20.1172, -70.9545)
 
@@ -609,13 +617,6 @@ mesh = ExtResource("16_6sk82")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("4_ig057")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80713, 7.06579)
-
-[node name="key" parent="." instance=ExtResource("9_kd5na")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.6202, 12.5811, -64.1825)
-collision_layer = 2147614724
-freeze = true
-script = ExtResource("18_rrfyh")
-picked_up_layer = 196608
 
 [node name="Viewport2Din3D" parent="." instance=ExtResource("18_6a20a")]
 transform = Transform3D(-1.30183, 0, -8.74228e-08, 0, 1, 0, 1.1381e-07, 0, -1, 60.9047, 9.5726, -63.6478)
@@ -678,8 +679,8 @@ mesh = ExtResource("21_n8iq8")
 
 [node name="Area3D" type="Area3D" parent="Door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-collision_layer = 131072
-collision_mask = 131072
+collision_layer = 16777216
+collision_mask = 16777216
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Area3D"]
 shape = SubResource("SphereShape3D_1b3dw")
@@ -690,7 +691,13 @@ shadow_enabled = true
 spot_range = 5.96573
 spot_angle = 38.2795
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.964653, 0.249735, 0.0841271, -0.183824, 0.408951, 0.89385, 0.188822, -0.87772, 0.440403, 0, 2.09813, 0)
+light_color = Color(0.929412, 0.741176, 0, 1)
+light_bake_mode = 1
+shadow_enabled = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="action_pressed" from="Slicer" to="." method="_on_slicer_action_pressed"]
-[connection signal="body_entered" from="Door/Area3D" to="key" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Door/Area3D" to="RigidBodys/key" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Door/Area3D" to="Door" method="_on_area_3d_body_entered"]

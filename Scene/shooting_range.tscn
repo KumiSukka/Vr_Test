@@ -194,13 +194,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.3711
 [node name="table_medium2" parent="." instance=ExtResource("8_7lku7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -1, 4)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.961516, -0.0669873, 0.266457, -0.242362, 0.25, 0.937422, -0.12941, -0.965926, 0.224144, 0, 16, 0)
-light_energy = 1.14
-light_indirect_energy = 2.026
-light_volumetric_fog_energy = 1.61
-shadow_enabled = true
-
 [node name="Viewport2Din3D" parent="." instance=ExtResource("9_8bp2v")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -128, 1, -21)
 scene = ExtResource("10_8oh3w")
@@ -232,6 +225,10 @@ transparent = 2
 [node name="Viewport2Din3D2" parent="." instance=ExtResource("9_8bp2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0628, 0.826893, -8.67255)
 scene = ExtResource("14_cye6p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.416551, 0.909113, 0, -0.909113, 0.416551, 0, 0, 0)
+shadow_enabled = true
 
 [connection signal="child_exiting_tree" from="ROOM1" to="ROOM1" method="_on_child_exiting_tree"]
 [connection signal="child_exiting_tree" from="ROOM2" to="ROOM2" method="_on_child_exiting_tree"]
