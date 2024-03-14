@@ -617,11 +617,12 @@ scene = ExtResource("19_bql8h")
 viewport_size = Vector2(420, 200)
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20.4078, 0)
+transform = Transform3D(1, -1.24111e-15, 2.98023e-08, -2.98023e-08, -4.37114e-08, 1, 6.15954e-17, -1, -4.37114e-08, 0, 12.0071, 0)
 light_color = Color(0.976471, 0, 0.482353, 1)
 light_energy = 4.0
 shadow_enabled = true
-spot_range = 31.0497
+spot_range = 46.7102
+spot_angle = 77.0068
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="."]
 transform = Transform3D(0.784419, 2.71112e-08, -0.620231, 0.620231, -3.4288e-08, 0.784419, 1.43502e-15, -1, -4.37114e-08, -10.477, 15.9741, -35.0372)
@@ -640,11 +641,12 @@ spot_range = 24.3208
 spot_angle = 59.1646
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.63964, 0.768674, 0, -0.768674, 0.63964, 40.4202, 28.281, -44.525)
+transform = Transform3D(0.965926, -0.114092, 0.232315, 0, 0.897597, 0.440817, -0.258819, -0.425796, 0.867012, 40.4202, 24.1458, -44.525)
 light_color = Color(0.976471, 0, 0.482353, 1)
 light_energy = 10.0
 shadow_enabled = true
-spot_range = 46.4616
+spot_range = 41.0
+spot_angle = 36.789
 
 [node name="Viewport2Din3D3" parent="." instance=ExtResource("18_6a20a")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.14349, 2.40429, -30.8735)
@@ -681,6 +683,11 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 61.137
 shadow_enabled = true
 spot_range = 5.96573
 spot_angle = 38.2795
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.996449, 1.11046e-08, -0.0841996, 0.0813305, 0.258819, 0.962496, 0.0217924, -0.965926, 0.2579, 0, 7.15394, 0)
+light_color = Color(0.819608, 0.8, 0, 1)
+directional_shadow_mode = 0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="action_pressed" from="Slicer" to="." method="_on_slicer_action_pressed"]
