@@ -27,9 +27,10 @@
 [sub_resource type="Environment" id="Environment_jwm04"]
 background_mode = 1
 background_color = Color(0.67451, 1, 0.513726, 1)
+background_energy_multiplier = 0.8
 fog_enabled = true
 fog_light_color = Color(0, 0.572549, 0.92549, 1)
-fog_light_energy = 0.5
+fog_light_energy = 0.4
 volumetric_fog_albedo = Color(0, 0.572549, 0.92549, 1)
 volumetric_fog_gi_inject = 4.36
 
@@ -600,15 +601,6 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Slicer/Area3D"]
 shape = SubResource("ConvexPolygonShape3D_8e3b8")
 
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.980505, -8.58902e-09, 0.196494, -0.196494, -4.28592e-08, 0.980505, 0, -1, -4.37114e-08, 0, 4.21792, 0)
-light_color = Color(1, 0.490196, 0.584314, 1)
-light_energy = 2.0
-shadow_blur = 5.151
-directional_shadow_mode = 1
-directional_shadow_blend_splits = true
-sky_mode = 1
-
 [node name="XROrigin3D" parent="." instance=ExtResource("4_ig057")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80713, 7.06579)
 
@@ -624,28 +616,23 @@ transform = Transform3D(-1.30183, 0, -8.74228e-08, 0, 1, 0, 1.1381e-07, 0, -1, 6
 scene = ExtResource("19_bql8h")
 viewport_size = Vector2(420, 200)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 61.0052, 13.0671, -71.0303)
-light_color = Color(1, 1, 0.85098, 1)
-light_energy = 4.205
-spot_range = 9.32815
-spot_angle = 43.8111
-
 [node name="SpotLight3D2" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20.4078, 0)
-light_energy = 5.0
+light_color = Color(0.976471, 0, 0.482353, 1)
+light_energy = 4.0
 shadow_enabled = true
 spot_range = 31.0497
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="."]
 transform = Transform3D(0.784419, 2.71112e-08, -0.620231, 0.620231, -3.4288e-08, 0.784419, 1.43502e-15, -1, -4.37114e-08, -10.477, 15.9741, -35.0372)
+light_color = Color(0.976471, 0, 0.482353, 1)
 light_energy = 5.0
 shadow_enabled = true
-shadow_reverse_cull_face = true
 spot_range = 33.0572
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.07289, 0.99734, 0, -0.99734, 0.07289, 11.4888, 24.6527, -52.7148)
+light_color = Color(0.976471, 0, 0.482353, 1)
 light_energy = 4.38
 shadow_enabled = true
 shadow_bias = 0.379
@@ -654,6 +641,7 @@ spot_angle = 59.1646
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.63964, 0.768674, 0, -0.768674, 0.63964, 40.4202, 28.281, -44.525)
+light_color = Color(0.976471, 0, 0.482353, 1)
 light_energy = 10.0
 shadow_enabled = true
 spot_range = 46.4616
