@@ -27,10 +27,10 @@
 [sub_resource type="Environment" id="Environment_jwm04"]
 background_mode = 1
 background_color = Color(0.67451, 1, 0.513726, 1)
-background_energy_multiplier = 0.8
 fog_enabled = true
 fog_light_color = Color(0, 0.572549, 0.92549, 1)
-fog_light_energy = 0.4
+fog_light_energy = 0.3
+fog_density = 0.05
 volumetric_fog_albedo = Color(0, 0.572549, 0.92549, 1)
 volumetric_fog_gi_inject = 4.36
 
@@ -675,6 +675,12 @@ collision_mask = 131072
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Area3D"]
 shape = SubResource("SphereShape3D_1b3dw")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 61.1377, 11.591, -70.9359)
+shadow_enabled = true
+spot_range = 5.96573
+spot_angle = 38.2795
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="action_pressed" from="Slicer" to="." method="_on_slicer_action_pressed"]
