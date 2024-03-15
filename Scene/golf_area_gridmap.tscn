@@ -1,10 +1,10 @@
 [gd_scene load_steps=28 format=3 uid="uid://ccpxw3xw0uk1s"]
 
-[ext_resource type="Texture2D" uid="uid://b4gsgf4y6gw6" path="res://proto5.png" id="1_2182c"]
-[ext_resource type="Texture2D" uid="uid://umjlsymp120a" path="res://proto.png" id="2_darsw"]
-[ext_resource type="Texture2D" uid="uid://dmgh64hoh68d8" path="res://proto3.png" id="3_cafv0"]
-[ext_resource type="Texture2D" uid="uid://dtaopf7703k4l" path="res://proto2.png" id="3_nfta7"]
-[ext_resource type="Texture2D" uid="uid://45airs5mgmkt" path="res://proto4.png" id="5_y0xrl"]
+[ext_resource type="Texture2D" uid="uid://b4gsgf4y6gw6" path="res://Assets/proto5.png" id="1_2182c"]
+[ext_resource type="Texture2D" uid="uid://umjlsymp120a" path="res://Assets/proto.png" id="2_darsw"]
+[ext_resource type="Texture2D" uid="uid://dmgh64hoh68d8" path="res://Assets/proto3.png" id="3_cafv0"]
+[ext_resource type="Texture2D" uid="uid://dtaopf7703k4l" path="res://Assets/proto2.png" id="3_nfta7"]
+[ext_resource type="Texture2D" uid="uid://45airs5mgmkt" path="res://Assets/proto4.png" id="5_y0xrl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vnne1"]
 resource_name = "Material.001"

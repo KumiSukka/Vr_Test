@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dghvndg7te5ob"
-path="res://.godot/imported/t-holder.glb-d4051a0ff2bed11ebfeb893beb9ce1de.scn"
+path="res://.godot/imported/t-holder.glb-e92cbd677b60b3e94305f7173bfcb3f0.scn"
 
 [deps]
 
-source_file="res://t-holder.glb"
-dest_files=["res://.godot/imported/t-holder.glb-d4051a0ff2bed11ebfeb893beb9ce1de.scn"]
+source_file="res://Assets/t-holder.glb"
+dest_files=["res://.godot/imported/t-holder.glb-e92cbd677b60b3e94305f7173bfcb3f0.scn"]
 
 [params]
 

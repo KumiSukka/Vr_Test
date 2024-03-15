@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c844xi6ybwvv6"
-path="res://.godot/imported/pilar.glb-643c56058fe5847f2191a0b8e7e15fc7.scn"
+path="res://.godot/imported/pilar.glb-517058bc667aa15c715480e0caec2261.scn"
 
 [deps]
 
-source_file="res://pilar.glb"
-dest_files=["res://.godot/imported/pilar.glb-643c56058fe5847f2191a0b8e7e15fc7.scn"]
+source_file="res://Assets/pilar.glb"
+dest_files=["res://.godot/imported/pilar.glb-517058bc667aa15c715480e0caec2261.scn"]
 
 [params]
 

@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://drs6mb2fyr2wx" path="res://Assets/golf_club.tscn" id="8_aoai7"]
 [ext_resource type="PackedScene" uid="uid://cqp0qkogqy2dk" path="res://Interfaces/return.tscn" id="8_octlk"]
 [ext_resource type="PackedScene" uid="uid://bidgue7h1wlnd" path="res://Interfaces/restart.tscn" id="9_dokwh"]
-[ext_resource type="Texture2D" uid="uid://dmgh64hoh68d8" path="res://proto3.png" id="10_dayvk"]
+[ext_resource type="Texture2D" uid="uid://dmgh64hoh68d8" path="res://Assets/proto3.png" id="10_dayvk"]
 
 [sub_resource type="Environment" id="Environment_s5k5m"]
 background_mode = 1

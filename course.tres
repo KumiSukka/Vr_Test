@@ -1,9 +1,9 @@
 [gd_resource type="MeshLibrary" load_steps=66 format=3 uid="uid://dao05f5me2fkc"]
 
-[ext_resource type="Texture2D" uid="uid://umjlsymp120a" path="res://proto.png" id="1_0ars2"]
-[ext_resource type="Texture2D" uid="uid://dtaopf7703k4l" path="res://proto2.png" id="2_doeho"]
-[ext_resource type="Texture2D" uid="uid://dmgh64hoh68d8" path="res://proto3.png" id="3_5dkol"]
-[ext_resource type="Texture2D" uid="uid://45airs5mgmkt" path="res://proto4.png" id="4_17bu2"]
+[ext_resource type="Texture2D" uid="uid://umjlsymp120a" path="res://Assets/proto.png" id="1_0ars2"]
+[ext_resource type="Texture2D" uid="uid://dtaopf7703k4l" path="res://Assets/proto2.png" id="2_doeho"]
+[ext_resource type="Texture2D" uid="uid://dmgh64hoh68d8" path="res://Assets/proto3.png" id="3_5dkol"]
+[ext_resource type="Texture2D" uid="uid://45airs5mgmkt" path="res://Assets/proto4.png" id="4_17bu2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cxqhe"]
 resource_name = "Material"

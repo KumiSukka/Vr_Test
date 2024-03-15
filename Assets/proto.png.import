@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://umjlsymp120a"
-path.s3tc="res://.godot/imported/proto.png-473881a4a1653adb5d8e72938ec86fb0.s3tc.ctex"
+path.s3tc="res://.godot/imported/proto.png-5310215024bd1623d74439000606dc70.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://proto.png"
-dest_files=["res://.godot/imported/proto.png-473881a4a1653adb5d8e72938ec86fb0.s3tc.ctex"]
+source_file="res://Assets/proto.png"
+dest_files=["res://.godot/imported/proto.png-5310215024bd1623d74439000606dc70.s3tc.ctex"]
 
 [params]
 

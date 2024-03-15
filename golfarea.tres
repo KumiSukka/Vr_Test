@@ -1,10 +1,10 @@
 [gd_resource type="MeshLibrary" load_steps=37 format=3 uid="uid://clcumfbvis78t"]
 
-[ext_resource type="Texture2D" uid="uid://umjlsymp120a" path="res://proto.png" id="1_5x4l1"]
-[ext_resource type="Texture2D" uid="uid://b4gsgf4y6gw6" path="res://proto5.png" id="1_x6cbx"]
-[ext_resource type="Texture2D" uid="uid://dtaopf7703k4l" path="res://proto2.png" id="2_7lr1i"]
-[ext_resource type="Texture2D" uid="uid://dmgh64hoh68d8" path="res://proto3.png" id="3_bcrup"]
-[ext_resource type="Texture2D" uid="uid://45airs5mgmkt" path="res://proto4.png" id="4_m78rk"]
+[ext_resource type="Texture2D" uid="uid://umjlsymp120a" path="res://Assets/proto.png" id="1_5x4l1"]
+[ext_resource type="Texture2D" uid="uid://b4gsgf4y6gw6" path="res://Assets/proto5.png" id="1_x6cbx"]
+[ext_resource type="Texture2D" uid="uid://dtaopf7703k4l" path="res://Assets/proto2.png" id="2_7lr1i"]
+[ext_resource type="Texture2D" uid="uid://dmgh64hoh68d8" path="res://Assets/proto3.png" id="3_bcrup"]
+[ext_resource type="Texture2D" uid="uid://45airs5mgmkt" path="res://Assets/proto4.png" id="4_m78rk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yimud"]
 albedo_texture = ExtResource("1_x6cbx")
