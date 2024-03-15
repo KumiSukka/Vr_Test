@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://mt6nlc0psfcy"]
+
+[ext_resource type="Script" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_e2hmq"]
+[ext_resource type="ArrayMesh" uid="uid://c62ts5sy7g01s" path="res://Assets/bowling/obj/bowlingball.obj" id="2_gskqf"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="3_ksvdv"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="4_a64ov"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4374t"]
+friction = 0.35
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5y3tn"]
+radius = 0.254333
+
+[node name="bowling_ball" type="RigidBody3D"]
+collision_layer = 7
+collision_mask = 196615
+mass = 10.0
+physics_material_override = SubResource("PhysicsMaterial_4374t")
+script = ExtResource("1_e2hmq")
+
+[node name="BowlingBall" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_gskqf")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0963327, 0)
+shape = SubResource("SphereShape3D_5y3tn")
+
+[node name="GrabPointHandLeft" parent="." instance=ExtResource("3_ksvdv")]
+transform = Transform3D(-0.683013, -0.183013, 0.707107, -0.683013, -0.183013, -0.707107, 0.258819, -0.965926, 1.13133e-08, 0.105232, 0.133692, -0.042501)
+
+[node name="GrabPointHandRight" parent="." instance=ExtResource("4_a64ov")]
+transform = Transform3D(0.866025, 2.18557e-08, 0.5, 0.5, -3.78552e-08, -0.866025, 0, 1, -4.37114e-08, 0.15858, 0.16438, 0.0463859)
