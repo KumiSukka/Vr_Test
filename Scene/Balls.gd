@@ -1,6 +1,5 @@
 extends Node3D
 
-
 var array_position = []
 var child_lenght = 0
 func _ready():
