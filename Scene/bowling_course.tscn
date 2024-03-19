@@ -178,6 +178,12 @@ light_bake_mode = 1
 shadow_enabled = true
 omni_range = 9.05091
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.756226, -0.0562274, 0.651891, -0.0992365, 0.974919, 0.199209, -0.646742, -0.215338, 0.731679, 0, 2.36015, 0)
+light_energy = 4.0
+shadow_enabled = true
+shadow_bias = 0.0
+
 [connection signal="body_entered" from="Detect_Ball" to="Pins" method="_on_detect_ball_body_entered"]
 [connection signal="body_entered" from="Detect_Ball" to="Balls" method="_on_detect_ball_body_entered"]
 [connection signal="body_entered" from="Detect_Ball" to="Balls2" method="_on_detect_ball_body_entered"]
