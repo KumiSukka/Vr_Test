@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2slqibnnuic5"]
+
+[ext_resource type="Shader" uid="uid://dfvvhiy8umm60" path="res://water.tres" id="1_vdsdd"]
+[ext_resource type="ArrayMesh" uid="uid://bjp3p58hf8idx" path="res://addons/kaykit_dungeon_remastered/Assets/obj/rubble_half.obj" id="2_7cnig"]
+[ext_resource type="MeshLibrary" uid="uid://dh013jkukc3tx" path="res://floorlib.tres" id="3_ommt2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rcssk"]
+render_priority = 0
+shader = ExtResource("1_vdsdd")
+shader_parameter/ColorParameter = Color(0, 0.836252, 0.805403, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3oc3m"]
+material = SubResource("ShaderMaterial_rcssk")
+size = Vector2(10, 10)
+subdivide_width = 20
+subdivide_depth = 20
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_3oc3m")
+
+[node name="rock" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2.61026, 0)
+mesh = ExtResource("2_7cnig")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("3_ommt2")
+data = {
+"cells": PackedInt32Array(-65535, 65533, 15, -1, 65533, 15, -3, 65533, 15, -3, 65534, 1441807, -3, 0, 1441807, -3, 2, 1441807, -2, 2, 655375, -65536, 2, 655375, -65534, 2, 655375, -65534, 1, 1048591, -65534, 65534, 1048591, -65534, 65535, 1048591)
+}
+metadata/_editor_floor_ = Vector3(0, -1, 0)

@@ -46,5 +46,4 @@ text = "Teleport to Bowling"
 [connection signal="pressed" from="MarginContainer/VBoxContainer/but2" to="." method="_on_but_2_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/but3" to="." method="_on_but_3_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/but4" to="." method="_on_but_4_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/but5" to="." method="_on_but_4_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/but5" to="." method="_on_but_5_pressed"]
