@@ -5,6 +5,7 @@ extends Node3D
 var array_position = []
 var child_lenght = 0
 var _reset = false
+var oddnumber = false
 func _ready():
 	for n in self.get_children():
 		array_position.append(n.global_position)
@@ -21,18 +22,22 @@ func _physics_process(delta):
 		for n in self.get_children():
 			n.freeze = true
 		reset()
-	if _reset == true:
+	if _reset == true && oddnumber == true:
 		for n in self.get_children():
 			n.freeze = true
 		reset()
 		_reset = false
+		oddnumber = false
 		monitor.monitoring = true
 	else :
 		pass
 
 
 func _on_reset_position_timeout():
-	_reset = true
+	if oddnumber == true:
+		_reset = true
+	else:
+		oddnumber = true
 
 
 func _on_detect_ball_body_entered(body):

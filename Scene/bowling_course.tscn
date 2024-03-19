@@ -121,7 +121,9 @@ one_shot = true
 
 [connection signal="body_entered" from="Detect_Ball" to="Pins" method="_on_detect_ball_body_entered"]
 [connection signal="body_entered" from="Detect_Ball" to="Balls" method="_on_detect_ball_body_entered"]
+[connection signal="body_entered" from="Detect_Ball" to="Balls2" method="_on_detect_ball_body_entered"]
 [connection signal="timeout" from="Reset_position" to="Pins" method="_on_reset_position_timeout"]
 [connection signal="timeout" from="Reset_position" to="Balls" method="_on_reset_position_timeout"]
+[connection signal="timeout" from="Reset_position" to="Balls2" method="_on_reset_position_timeout"]
 
 [editable path="Balls2/bowling_ball"]
