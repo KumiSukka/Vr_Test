@@ -1,32 +1,66 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2slqibnnuic5"]
+[gd_scene load_steps=9 format=3 uid="uid://c2slqibnnuic5"]
 
+[ext_resource type="Script" path="res://water_generation.gd" id="1_kq0a0"]
 [ext_resource type="Shader" uid="uid://dfvvhiy8umm60" path="res://water.tres" id="1_vdsdd"]
-[ext_resource type="ArrayMesh" uid="uid://bjp3p58hf8idx" path="res://addons/kaykit_dungeon_remastered/Assets/obj/rubble_half.obj" id="2_7cnig"]
-[ext_resource type="MeshLibrary" uid="uid://dh013jkukc3tx" path="res://floorlib.tres" id="3_ommt2"]
+[ext_resource type="PackedScene" uid="uid://nack1qite6lx" path="res://addons/godot-xr-tools/objects/wind_area.tscn" id="4_0akmg"]
+[ext_resource type="PackedScene" uid="uid://b2g5pp80q1rkg" path="res://Scene/player_swim.tscn" id="4_i5rws"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rcssk"]
 render_priority = 0
 shader = ExtResource("1_vdsdd")
-shader_parameter/ColorParameter = Color(0, 0.836252, 0.805403, 1)
+shader_parameter/ColorParameter = Color(0.136366, 0.54003, 0.395957, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_3oc3m"]
+lightmap_size_hint = Vector2i(502, 502)
 material = SubResource("ShaderMaterial_rcssk")
-size = Vector2(10, 10)
-subdivide_width = 20
-subdivide_depth = 20
+size = Vector2(100, 100)
+subdivide_width = 30
+subdivide_depth = 30
+
+[sub_resource type="Environment" id="Environment_exiyt"]
+background_mode = 1
+background_color = Color(0.592157, 0.870588, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i4aqn"]
+size = Vector3(13.14, 7, 12.9747)
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_kq0a0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_3oc3m")
 
-[node name="rock" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2.61026, 0)
-mesh = ExtResource("2_7cnig")
+[node name="XROrigin3D" parent="." instance=ExtResource("4_i5rws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.562407, 2.23793)
 
-[node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource("3_ommt2")
-data = {
-"cells": PackedInt32Array(-65535, 65533, 15, -1, 65533, 15, -3, 65533, 15, -3, 65534, 1441807, -3, 0, 1441807, -3, 2, 1441807, -2, 2, 655375, -65536, 2, 655375, -65534, 2, 655375, -65534, 1, 1048591, -65534, 65534, 1048591, -65534, 65535, 1048591)
-}
-metadata/_editor_floor_ = Vector3(0, -1, 0)
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5.48346)
+current = true
+fov = 121.819
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_exiyt")
+
+[node name="WindArea" parent="." instance=ExtResource("4_0akmg")]
+collision_layer = 2148007936
+collision_mask = 2148007936
+monitoring = true
+gravity_space_override = 3
+gravity_point_center = Vector3(0, 0, 0)
+gravity_direction = Vector3(0, 0, 0)
+gravity = 32.0
+linear_damp_space_override = 3
+linear_damp = 100.0
+angular_damp_space_override = 3
+angular_damp = 100.0
+wind_vector = Vector3(0, 0.5, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="WindArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.137512, -3.72278, -0.0262756)
+shape = SubResource("BoxShape3D_i4aqn")
+
+[editable path="XROrigin3D"]
+[editable path="XROrigin3D/LeftHand/LeftHand"]
+[editable path="XROrigin3D/LeftHand/LeftHand/Hand_low_L"]
+[editable path="XROrigin3D/RightHand/RightHand"]
+[editable path="XROrigin3D/RightHand/RightHand/Hand_low_R"]
