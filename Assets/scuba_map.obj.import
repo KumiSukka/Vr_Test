@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://k7v2h0uj0ubg"
+path="res://.godot/imported/scuba_map.obj-5f3476b7c279548443d8e7c179719a98.mesh"
+
+[deps]
+
+files=["res://.godot/imported/scuba_map.obj-5f3476b7c279548443d8e7c179719a98.mesh"]
+
+source_file="res://Assets/scuba_map.obj"
+dest_files=["res://.godot/imported/scuba_map.obj-5f3476b7c279548443d8e7c179719a98.mesh", "res://.godot/imported/scuba_map.obj-5f3476b7c279548443d8e7c179719a98.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
