@@ -20,7 +20,7 @@ input_name = "time"
 [sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_xnlv5"]
 parameter_name = "ColorParameter"
 default_value_enabled = true
-default_value = Color(0.136366, 0.54003, 0.395957, 1)
+default_value = Color(0.0430034, 0.702833, 0.68768, 1)
 
 [sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_s3xde"]
 function = 12
@@ -106,7 +106,7 @@ noise = SubResource("FastNoiseLite_yenbf")
 texture = SubResource("NoiseTexture2D_2qb8x")
 
 [sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_t8bm1"]
-default_input_values = [1, Vector2(0.1, 0.1), 2, Vector2(0, 0)]
+default_input_values = [1, Vector2(0.04, 0.04), 2, Vector2(0, 0)]
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_sfuyn"]
 input_name = "vertex"
@@ -119,7 +119,7 @@ default_input_values = [0, Vector4(0, 0, 0, 0), 1, Vector4(1, 1, 1, 1), 2, Vecto
 op_type = 3
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_01oxt"]
-default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(0.1, 0.1, 0.1)]
+default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(0.5, 0.5, 0.5)]
 operator = 2
 
 [resource]
@@ -127,7 +127,7 @@ code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_disabled, diffuse_lambert, specular_schlick_ggx;
 
 uniform sampler2D tex_vtx_3;
-uniform vec4 ColorParameter : source_color = vec4(0.136366, 0.540030, 0.395957, 1.000000);
+uniform vec4 ColorParameter : source_color = vec4(0.043003, 0.702833, 0.687680, 1.000000);
 uniform sampler2D tex_frg_3;
 uniform sampler2D tex_frg_7;
 uniform sampler2D depth_tex_frg_14 : hint_depth_texture;
@@ -140,7 +140,7 @@ void vertex() {
 
 
 // UVFunc:4
-	vec2 n_in4p1 = vec2(0.10000, 0.10000);
+	vec2 n_in4p1 = vec2(0.04000, 0.04000);
 	vec2 n_out4p0 = vec2(n_out2p0) * n_in4p1 + UV;
 
 
@@ -153,7 +153,7 @@ void vertex() {
 
 
 // VectorOp:8
-	vec3 n_in8p1 = vec3(0.10000, 0.10000, 0.10000);
+	vec3 n_in8p1 = vec3(0.50000, 0.50000, 0.50000);
 	vec3 n_out8p0 = n_out6p0 * n_in8p1;
 
 
@@ -287,6 +287,7 @@ void fragment() {
 
 }
 "
+graph_offset = Vector2(-515.636, -98.7862)
 modes/cull = 2
 nodes/vertex/0/position = Vector2(1000, -20)
 nodes/vertex/2/node = SubResource("VisualShaderNodeInput_xv1bw")
