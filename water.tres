@@ -20,7 +20,7 @@ input_name = "time"
 [sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_xnlv5"]
 parameter_name = "ColorParameter"
 default_value_enabled = true
-default_value = Color(0.0430034, 0.702833, 0.68768, 1)
+default_value = Color(0.136366, 0.54003, 0.395957, 1)
 
 [sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_s3xde"]
 function = 12
@@ -127,7 +127,7 @@ code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_disabled, diffuse_lambert, specular_schlick_ggx;
 
 uniform sampler2D tex_vtx_3;
-uniform vec4 ColorParameter : source_color = vec4(0.043003, 0.702833, 0.687680, 1.000000);
+uniform vec4 ColorParameter : source_color = vec4(0.136366, 0.540030, 0.395957, 1.000000);
 uniform sampler2D tex_frg_3;
 uniform sampler2D tex_frg_7;
 uniform sampler2D depth_tex_frg_14 : hint_depth_texture;
