@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ty5rydkc6qbs"
+path="res://.godot/imported/ruin2.obj-22927ec91992e496919ef965ee709cdc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ruin2.obj-22927ec91992e496919ef965ee709cdc.mesh"]
+
+source_file="res://Assets/ruin2.obj"
+dest_files=["res://.godot/imported/ruin2.obj-22927ec91992e496919ef965ee709cdc.mesh", "res://.godot/imported/ruin2.obj-22927ec91992e496919ef965ee709cdc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
