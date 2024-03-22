@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b8ns0ph10a5bf"]
 
-[ext_resource type="Script" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_hknba"]
+[ext_resource type="Script" path="res://floater.gd" id="1_hxu3c"]
 [ext_resource type="ArrayMesh" uid="uid://gufjnc4r2eu7" path="res://Assets/crate.obj" id="2_vic7n"]
 [ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="3_t41m6"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="4_n05aq"]
@@ -9,9 +9,13 @@
 points = PackedVector3Array(0.515387, 0.0263784, 0.089779, 0.499981, 0.139064, 0.499916, 0.515387, 0.0120194, 0.089779, 0.515387, 0.0263784, -0.0899767, 0.499981, -0.18051, 0.499916, 0.499981, 0.139064, -0.500114, 0.447105, 0.21543, 0.447067, 0.151514, 0.0277199, 0.873623, 0.515387, 0.0120194, -0.0899767, -0.5, -0.18051, 0.499916, 0.499981, -0.18051, -0.500114, 0.151514, -0.0691659, 0.873623, 0.447105, 0.21543, -0.447265, 0.151514, 0.0277199, -0.87365, 0.329127, 0.327072, 0.329054, -0.151632, 0.0277199, 0.873623, -0.151632, -0.0691659, 0.873623, -0.5, 0.139064, 0.499916, -0.5, -0.18051, -0.500114, 0.151514, -0.0691659, -0.87365, 0.329127, 0.327072, -0.329252, -0.151632, 0.0277199, -0.87365, -0.329245, 0.327072, 0.329054, -0.447223, 0.21543, 0.447067, -0.5, 0.139064, -0.500114, -0.151632, -0.0691659, -0.87365, -0.329245, 0.327072, -0.329252, -0.447223, 0.21543, -0.447265)
 
 [node name="floater" type="RigidBody3D"]
-collision_layer = 524293
-collision_mask = 720903
-script = ExtResource("1_hknba")
+collision_layer = 5
+collision_mask = 196615
+mass = 0.5
+script = ExtResource("1_hxu3c")
+float_force = 2.0
+water_drag = 0.1
+water_angular_drag = 0.1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_vic7n")

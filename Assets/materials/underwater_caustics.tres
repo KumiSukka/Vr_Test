@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bh228py0i6ldf"]
+
+[ext_resource type="Shader" uid="uid://d16a5gh4licu3" path="res://Assets/materials/underwater_caustics_vs.tres" id="1_yg3pq"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_yg3pq")
+shader_parameter/FloatParameter = 5.0
+shader_parameter/FloatParameter2 = 5.0
