@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c2slqibnnuic5"]
+[gd_scene load_steps=19 format=3 uid="uid://c2slqibnnuic5"]
 
 [ext_resource type="Script" path="res://water_generation.gd" id="1_kq0a0"]
 [ext_resource type="Shader" uid="uid://dfvvhiy8umm60" path="res://water.tres" id="1_vdsdd"]
@@ -7,6 +7,7 @@
 [ext_resource type="ArrayMesh" uid="uid://gec4jsf88wcc" path="res://Assets/boat.obj" id="6_4mn25"]
 [ext_resource type="Script" path="res://floating.gd" id="6_jm4w0"]
 [ext_resource type="ArrayMesh" uid="uid://n123cvckb8wy" path="res://Assets/ruin1.obj" id="8_fse7j"]
+[ext_resource type="Script" path="res://floater.gd" id="9_dmg5m"]
 [ext_resource type="ArrayMesh" uid="uid://k7v2h0uj0ubg" path="res://Assets/scuba_map.obj" id="75_l8cwx"]
 [ext_resource type="PackedScene" uid="uid://b8ns0ph10a5bf" path="res://floater.tscn" id="77_anwys"]
 
@@ -88,10 +89,12 @@ mesh = ExtResource("75_l8cwx")
 shape = SubResource("ConcavePolygonShape3D_4jk0o")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.01854, -3.08446, -1.80306)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.01854, -4.08446, -1.80306)
 constant_force = Vector3(0, 3, 0)
 script = ExtResource("6_jm4w0")
 float_force = 3.0
+water_drag = 0.08
+water_angular_drag = 0.08
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -0.839206)
@@ -106,8 +109,13 @@ transform = Transform3D(0.866025, 0.351579, 0.355516, 0, -0.711033, 0.703159, 0.
 shadow_enabled = true
 
 [node name="floater" parent="." instance=ExtResource("77_anwys")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3688, -1.1198, 3.19133)
-constant_force = Vector3(0, 3, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6312, -5.1198, -2.80867)
+collision_layer = 5
+collision_mask = 196615
+script = ExtResource("9_dmg5m")
+float_force = 3.0
+water_drag = 0.08
+water_angular_drag = 0.08
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.94545, -0.325766, 0, 0.325766, 0.94545, 31.1408, -16.8747, 0)
