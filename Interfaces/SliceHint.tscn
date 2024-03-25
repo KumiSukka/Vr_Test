@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c3skpawl4u5gy"]
+[gd_scene format=3 uid="uid://bu6k1f0bgdt40"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -30,4 +30,4 @@ horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="CanvasLayer/CenterContainer/VSplitContainer"]
 layout_mode = 2
-text = "Slice by picking the sword and using action trigger"
+text = "Glimp by pressin bottom trigger"

@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cqp0qkogqy2dk" path="res://Interfaces/return.tscn" id="6_c75dx"]
 [ext_resource type="PackedScene" uid="uid://c4ssnplclmaip" path="res://Interfaces/Victory_Menu.tscn" id="6_rtx32"]
 [ext_resource type="PackedScene" uid="uid://bbgwpje78fyue" path="res://Assets/hide_whenplayer.tscn" id="7_uyy34"]
-[ext_resource type="PackedScene" uid="uid://c3skpawl4u5gy" path="res://Interfaces/ClimpHint.tscn" id="8_kwqbe"]
+[ext_resource type="PackedScene" uid="uid://bu6k1f0bgdt40" path="res://Interfaces/SliceHint.tscn" id="9_ndgti"]
 [ext_resource type="Material" uid="uid://j1vxigs43e7a" path="res://Scene/billboard_material.tres" id="9_pqme0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oj56g"]
@@ -289,7 +289,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.17466, 0, 6.70761)
 [node name="Viewport2Din3D" parent="Hide_whenplayer" instance=ExtResource("5_a6jkg")]
 transform = Transform3D(1, 0, 0, 0, 0.743318, 0, 0, 0, 1, 0, 2.49238, 0)
 enabled = false
-scene = ExtResource("8_kwqbe")
+scene = ExtResource("9_ndgti")
 viewport_size = Vector2(450, 200)
 input_keyboard = false
 material = ExtResource("9_pqme0")
