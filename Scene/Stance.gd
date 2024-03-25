@@ -10,6 +10,8 @@ var stance_cooldown = false
 		
 func _ready():
 	stanceSwap()
+
+#could be done better but works for now and hard to map in my head
 func stanceSwap():
 	if (PickUp.enabled == true):
 			stance_cooldown = true

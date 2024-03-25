@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-
+#Scene changing on button input
 
 func _on_but_1_pressed():
 	get_tree().change_scene_to_file("res://Scene/shooting_range.tscn")

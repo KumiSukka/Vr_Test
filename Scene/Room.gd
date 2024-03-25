@@ -1,5 +1,7 @@
 extends Node3D
 
+
+#this room cheks how many targets left and resets by that
 var childs = 0
 func _ready():
 	for i in self.get_child_count():

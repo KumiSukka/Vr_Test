@@ -5,6 +5,7 @@ var velocity : Vector3
 @onready var hitarea = $hitbox
 @onready var collider = $bat
 
+#Similiar to golf_ball were we add hit detection and disable certain layer
 func _physics_process(delta):
 	var collision_info = move_and_collide(velocity * delta)
 	if collision_info && can_hit:
