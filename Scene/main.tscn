@@ -29,14 +29,14 @@ ambient_light_energy = 4.84
 resource_local_to_scene = true
 size = Vector2(3, 2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_o3nv4"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_t5m4k"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qq4hk"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66oni"]
 transparency = 1
 cull_mode = 2
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_o3nv4")
+albedo_texture = SubResource("ViewportTexture_t5m4k")
 texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wrkvx"]
@@ -55,7 +55,6 @@ environment = SubResource("Environment_7s6u7")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.625324, 0.780365, 0, -0.780365, -0.625324, 0, 17.3147, -25.4854)
 light_color = Color(1, 0.890196, 0.784314, 1)
-light_energy = 0.526
 shadow_enabled = true
 
 [node name="XRToolsPickable" parent="." instance=ExtResource("4_g3tqw")]
@@ -141,7 +140,7 @@ size = Vector2i(600, 400)
 
 [node name="Screen" parent="Viewport2Din3D" index="1"]
 mesh = SubResource("QuadMesh_urr6x")
-surface_material_override/0 = SubResource("StandardMaterial3D_qq4hk")
+surface_material_override/0 = SubResource("StandardMaterial3D_66oni")
 
 [node name="StaticBody3D" parent="Viewport2Din3D" index="2"]
 viewport_size = Vector2(600, 400)
