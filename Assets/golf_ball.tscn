@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1uhc82nb5pes"]
+[gd_scene load_steps=6 format=3 uid="uid://c1uhc82nb5pes"]
 
 [ext_resource type="Script" path="res://Assets/golf_ball.gd" id="1_jq665"]
 
@@ -9,6 +9,12 @@ bounce = 0.6
 absorbent = true
 
 [sub_resource type="SphereMesh" id="SphereMesh_7sfgf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mbvj0"]
+roughness = 0.55
+emission_enabled = true
+emission = Color(0.435294, 0.486275, 0.34902, 1)
+emission_energy_multiplier = 0.5
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hk3ku"]
 radius = 0.0518896
@@ -26,6 +32,7 @@ script = ExtResource("1_jq665")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 layers = 65537
 mesh = SubResource("SphereMesh_7sfgf")
+surface_material_override/0 = SubResource("StandardMaterial3D_mbvj0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_hk3ku")
