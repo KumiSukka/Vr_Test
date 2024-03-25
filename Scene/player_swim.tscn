@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://b2g5pp80q1rkg"]
+[gd_scene load_steps=103 format=3 uid="uid://b2g5pp80q1rkg"]
 
 [ext_resource type="Script" path="res://Scene/player.gd" id="1_rttfn"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="2_t6ked"]
@@ -42,6 +42,8 @@
 [ext_resource type="Animation" uid="uid://d06l7hygl4qt3" path="res://addons/godot-xr-tools/hands/animations/left/Surfer.res" id="41_bq22s"]
 [ext_resource type="Animation" uid="uid://bxei4oebd4hu3" path="res://addons/godot-xr-tools/hands/animations/left/Thumb.res" id="42_76yc2"]
 [ext_resource type="Script" path="res://addons/godot-xr-tools/functions/function_pickup.gd" id="44_e7vsm"]
+[ext_resource type="Texture2D" uid="uid://bv04gb1rnvgmh" path="res://Interfaces/Sprite_float.png" id="45_jhnqi"]
+[ext_resource type="Texture2D" uid="uid://bf66jnogk2ebm" path="res://Interfaces/Sprite_swim.png" id="46_n50cn"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="47_vnflf"]
 [ext_resource type="Animation" uid="uid://do01jton6rk42" path="res://addons/godot-xr-tools/hands/animations/right/Cup.res" id="48_8sk38"]
 [ext_resource type="Animation" uid="uid://ky28birj4su6" path="res://addons/godot-xr-tools/hands/animations/right/Default pose.res" id="49_7vgoj"]
@@ -159,6 +161,20 @@ nodes/OpenHand/position = Vector2(-600, 100)
 nodes/Trigger/node = SubResource("AnimationNodeBlend2_2cc86")
 nodes/Trigger/position = Vector2(-360, 20)
 node_connections = [&"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1", &"output", 0, &"Grip"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_28wbw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_jhnqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_n50cn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_reqae"]
 _data = {
@@ -311,6 +327,17 @@ turn_mode = 1
 smooth_turn_speed = 1.5
 step_turn_angle = 45.0
 
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="LeftHand"]
+transform = Transform3D(0.19, 0, 0, 0, 0.19, 0, 0, 0, 0.19, 0, 0.0635984, 0)
+double_sided = false
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_28wbw")
+
+[node name="Timer" type="Timer" parent="LeftHand"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
 [node name="RightHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
@@ -367,11 +394,28 @@ controller = 1
 pitch = 0
 bearing = 0
 
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="RightHand"]
+transform = Transform3D(0.19, 0, 0, 0, 0.19, 0, 0, 0, 0.19, 0, 0.0635984, 0)
+double_sided = false
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_28wbw")
+
+[node name="Timer" type="Timer" parent="RightHand"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
 [node name="MovementClimb" parent="." instance=ExtResource("86_i2m7u")]
 
 [node name="MovementWind" parent="." instance=ExtResource("85_luomv")]
 
 [connection signal="button_pressed" from="LeftHand" to="LeftHand" method="_on_button_pressed"]
+[connection signal="flight_finished" from="LeftHand/MovementFlight" to="LeftHand" method="_on_movement_flight_flight_finished"]
+[connection signal="flight_started" from="LeftHand/MovementFlight" to="LeftHand" method="_on_movement_flight_flight_started"]
+[connection signal="timeout" from="LeftHand/Timer" to="LeftHand" method="_on_timer_timeout"]
+[connection signal="flight_finished" from="RightHand/MovementFlight" to="RightHand" method="_on_movement_flight_flight_finished"]
+[connection signal="flight_started" from="RightHand/MovementFlight" to="RightHand" method="_on_movement_flight_flight_started"]
+[connection signal="timeout" from="RightHand/Timer" to="RightHand" method="_on_timer_timeout"]
 
 [editable path="LeftHand/LeftHand"]
 [editable path="LeftHand/LeftHand/Hand_low_L"]

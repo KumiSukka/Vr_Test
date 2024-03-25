@@ -40,7 +40,6 @@ func stanceSwap():
 func _process(delta):
 	if is_button_pressed(by_input):
 		if stance_cooldown == true:
-			print("stance cooldown")
 			timer.start()
 		else:
 			print("stance swapped")
