@@ -1,5 +1,7 @@
 extends XRToolsPickable
 
+#Basic water physics script to fake physics in code rather than in gravity with areas like its done in player for pickable objects Same as regular rigidbody one -> Look into the regular one for proper comments
+
 @export var float_force = 1.0
 @export var water_drag = 0.05
 @export var water_angular_drag = 0.05
