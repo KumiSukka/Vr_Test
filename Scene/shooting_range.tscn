@@ -22,7 +22,7 @@ sky_material = SubResource("ShaderMaterial_2sfld")
 
 [sub_resource type="Environment" id="Environment_sghja"]
 background_mode = 1
-background_color = Color(0.635294, 0.329412, 0.247059, 1)
+background_color = Color(0.498039, 0.329412, 0.266667, 1)
 sky = SubResource("Sky_yr101")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7gqhu"]
@@ -228,6 +228,8 @@ scene = ExtResource("14_cye6p")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.416551, 0.909113, 0, -0.909113, 0.416551, 0, 0, 0)
+light_color = Color(1, 0.854902, 0.678431, 1)
+light_energy = 2.0
 shadow_enabled = true
 
 [connection signal="child_exiting_tree" from="ROOM1" to="ROOM1" method="_on_child_exiting_tree"]

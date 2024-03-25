@@ -18,7 +18,7 @@ sky_material = SubResource("ShaderMaterial_oj56g")
 
 [sub_resource type="Environment" id="Environment_xbenj"]
 background_mode = 1
-background_color = Color(0.635294, 0.329412, 0.247059, 1)
+background_color = Color(0.905882, 0.486275, 0.372549, 1)
 sky = SubResource("Sky_5lt8y")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ltsjk"]
@@ -300,7 +300,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 20
 scene = ExtResource("6_c75dx")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.983994, -0.0690357, 0.164285, -0.178201, -0.381202, 0.907154, 0, -0.92191, -0.387403, 0, 0, 0)
+transform = Transform3D(0.983994, -0.0690356, 0.164285, -0.178201, -0.381202, 0.907154, 0, -0.92191, -0.387403, 0, 4.07638, 0)
+light_color = Color(1, 0.921569, 0.839216, 1)
+light_energy = 1.5
 shadow_enabled = true
 
 [connection signal="body_entered" from="Fall_Catcher" to="." method="_on_fall_catcher_body_entered"]

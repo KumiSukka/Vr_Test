@@ -13,7 +13,7 @@
 
 [sub_resource type="Environment" id="Environment_s5k5m"]
 background_mode = 1
-background_color = Color(0.760784, 0.843137, 1, 1)
+background_color = Color(0, 0.0627451, 0.298039, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8c4o"]
 albedo_color = Color(0.262745, 0.662745, 1, 1)
@@ -90,6 +90,6 @@ shape = SubResource("ConcavePolygonShape3D_l5uu1")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.978735, 7.92178e-11, -0.205128, 0.204253, 0.0922664, 0.97456, 0.0189264, -0.995734, 0.0903043, -1.58299, 8.1887, 0.372732)
-light_color = Color(0.788235, 0, 0.427451, 1)
+light_color = Color(1, 0.796078, 0.858824, 1)
 shadow_enabled = true
 sky_mode = 1

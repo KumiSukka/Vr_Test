@@ -22,21 +22,21 @@
 
 [sub_resource type="Environment" id="Environment_7s6u7"]
 background_mode = 1
-background_color = Color(0.784314, 0.623529, 0.529412, 1)
+background_color = Color(0.764706, 0.803922, 0.74902, 1)
 ambient_light_energy = 4.84
 
 [sub_resource type="QuadMesh" id="QuadMesh_urr6x"]
 resource_local_to_scene = true
 size = Vector2(3, 2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_6ck6l"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_spsrq"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_naobb"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dfy5i"]
 transparency = 1
 cull_mode = 2
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_6ck6l")
+albedo_texture = SubResource("ViewportTexture_spsrq")
 texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wrkvx"]
@@ -140,7 +140,7 @@ size = Vector2i(600, 400)
 
 [node name="Screen" parent="Viewport2Din3D" index="1"]
 mesh = SubResource("QuadMesh_urr6x")
-surface_material_override/0 = SubResource("StandardMaterial3D_naobb")
+surface_material_override/0 = SubResource("StandardMaterial3D_dfy5i")
 
 [node name="StaticBody3D" parent="Viewport2Din3D" index="2"]
 viewport_size = Vector2(600, 400)
