@@ -1,12 +1,13 @@
 extends Node3D
 
-@export_flags_3d_physics var fragment_collission_layer:int = 1
-@export_flags_3d_physics var fragment_collission_mask:int = 1
-@export var break_speed:float = 1
-@export var min_frag_lifetime:float = 3
-@export var max_frag_lifetime:float = 5
-@onready var Glass_bottle_fractured = $glass_bottle_fractured
-@onready var breakOrigin = $origin
+
+@export_flags_3d_physics var fragment_collission_layer:int = 1 #Layers for fragments that we generate 
+@export_flags_3d_physics var fragment_collission_mask:int = 1 #Masks for fragments that we generate 
+@export var break_speed:float = 1 #How fast it breaks into junks
+@export var min_frag_lifetime:float = 3 #Minimun lifetime
+@export var max_frag_lifetime:float = 5 #Maximum lifetime
+@onready var Glass_bottle_fractured = $glass_bottle_fractured #Fractured model that will be used for generating physics
+@onready var breakOrigin = $origin #Where we spawns sharts
 @export var shatter:bool = false
 
 
