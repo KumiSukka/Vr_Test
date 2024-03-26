@@ -261,7 +261,7 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_tqlcu")
 
 [node name="RigidBody3d2" type="RigidBody3D" parent="RigidBodys"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.93886, 2.51517, -10.7716)
+transform = Transform3D(0.748643, 0.662973, 0, -0.662973, 0.748643, 0, 0, 0, 1, -1.70516, 3.17157, -10.8061)
 collision_layer = 2147483649
 collision_mask = 2147483649
 freeze = true
