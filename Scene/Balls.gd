@@ -4,6 +4,9 @@ extends Node3D
 @onready var timer: Timer = $"../Reset_position" #Timer for resetting positions
 @onready var monitor: Area3D = $"../Detect_Ball" #Area that starts timer to resets positions when it detects bowlingball/pins
 @onready var Ball = $bowling_ball
+@onready var ball_stuck = $"../Ball_stuck"
+@onready var disable: Area3D = $"../Disable_pickup"
+
 
 
 var array_position = [] #Orginal positions are stored in this
@@ -59,9 +62,17 @@ func _on_bowling_ball_picked_up(pickable):
 	Ball.enabled = false
 
 
+#Make sure ball is not stuck on course and make it so if theres ball in course cannot throw second ball
+
 func _on_disable_pick_up_body_entered(body):
 	Ball.enabled = false
-
+	ball_stuck.start()
 
 func _on_disable_pick_up_body_exited(body):
 	Ball.enabled = true
+
+func _on_ball_stuck_timeout():
+	if disable.has_overlapping_bodies () == true:
+		reset()
+	else:
+		pass
