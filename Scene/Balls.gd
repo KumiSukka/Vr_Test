@@ -3,6 +3,7 @@ extends Node3D
 #Script to reset bowling ball positions
 @onready var timer: Timer = $"../Reset_position" #Timer for resetting positions
 @onready var monitor: Area3D = $"../Detect_Ball" #Area that starts timer to resets positions when it detects bowlingball/pins
+@onready var Ball = $bowling_ball
 
 
 var array_position = [] #Orginal positions are stored in this
@@ -46,3 +47,21 @@ func _on_reset_position_timeout():
 func _on_detect_ball_body_entered(body):
 	timer.start()
 	monitor.monitoring = false
+
+
+#Make it so you cant carry 2 bowling balls
+func _on_bowling_ball_released(pickable, by):
+	Ball.enabled = true
+
+
+
+func _on_bowling_ball_picked_up(pickable):
+	Ball.enabled = false
+
+
+func _on_disable_pick_up_body_entered(body):
+	Ball.enabled = false
+
+
+func _on_disable_pick_up_body_exited(body):
+	Ball.enabled = true
