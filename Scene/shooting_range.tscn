@@ -232,6 +232,22 @@ light_color = Color(1, 0.854902, 0.678431, 1)
 light_energy = 2.0
 shadow_enabled = true
 
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.0098, 0.917585, -19.0872)
+omni_range = 5.57878
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.9744, 0.917585, -19.0872)
+omni_range = 5.57878
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.5462, 0.917585, -22.7417)
+omni_range = 5.57878
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.8994, 0.917585, -22.7417)
+omni_range = 5.57878
+
 [connection signal="child_exiting_tree" from="ROOM1" to="ROOM1" method="_on_child_exiting_tree"]
 [connection signal="child_exiting_tree" from="ROOM2" to="ROOM2" method="_on_child_exiting_tree"]
 [connection signal="child_exiting_tree" from="ROOM3" to="ROOM3" method="_on_child_exiting_tree"]
