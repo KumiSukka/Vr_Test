@@ -330,7 +330,8 @@ libraries = {
 tree_root = SubResource("AnimationNodeBlendTree_kdqac")
 
 [node name="FunctionTeleport" parent="LeftHand/LeftHand" instance=ExtResource("3_uhde3")]
-teleport_button_action = "primary"
+teleport_button_action = "ax_button"
+rotation_action = ""
 valid_teleport_mask = 1
 
 [node name="FunctionPickup" type="Node3D" parent="LeftHand"]
@@ -338,9 +339,6 @@ script = ExtResource("41_yws83")
 
 [node name="FunctionPointer" parent="LeftHand" instance=ExtResource("81_y3rbu")]
 enabled = false
-
-[node name="MovementJump" parent="LeftHand" instance=ExtResource("84_ukaqq")]
-jump_button_action = "ax_button"
 
 [node name="Timer" type="Timer" parent="LeftHand"]
 wait_time = 0.1
@@ -361,6 +359,8 @@ sprite_frames = SubResource("SpriteFrames_ruqov")
 wait_time = 2.0
 one_shot = true
 autostart = true
+
+[node name="MovementDirect" parent="LeftHand" instance=ExtResource("5_13e30")]
 
 [node name="RightHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
@@ -406,13 +406,6 @@ libraries = {
 }
 tree_root = SubResource("AnimationNodeBlendTree_si3ya")
 
-[node name="MovementDirect" parent="RightHand" instance=ExtResource("5_13e30")]
-
-[node name="MovementTurn" parent="RightHand" instance=ExtResource("6_q0370")]
-turn_mode = 1
-smooth_turn_speed = 1.5
-step_turn_angle = 45.0
-
 [node name="FunctionPickup" parent="RightHand" instance=ExtResource("8_2mcvr")]
 
 [node name="FunctionPointer" parent="RightHand" instance=ExtResource("81_y3rbu")]
@@ -437,6 +430,14 @@ sprite_frames = SubResource("SpriteFrames_ruqov")
 wait_time = 2.0
 one_shot = true
 autostart = true
+
+[node name="MovementTurn" parent="RightHand" instance=ExtResource("6_q0370")]
+turn_mode = 1
+smooth_turn_speed = 1.5
+step_turn_angle = 45.0
+
+[node name="MovementJump" parent="RightHand" instance=ExtResource("84_ukaqq")]
+jump_button_action = "ax_button"
 
 [node name="MovementClimb" parent="." instance=ExtResource("83_e5quq")]
 

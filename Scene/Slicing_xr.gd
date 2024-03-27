@@ -3,7 +3,8 @@ extends Node3D
 
 @onready var player = $XROrigin3D
 @onready var slicer = $Slicer
-
+@onready var slice_area = $Slicer/mesh
+@onready var timer = $Slice_delay
 var meshSlicer = MeshSlicer.new()
 var CrossSection = load("res://Cross_Section.tres")
 var xr_interface: XRInterface
@@ -129,3 +130,9 @@ func _physics_process(delta):
 
 func _on_slicer_action_pressed(pickable):
 	slice_automatic()
+	slice_area.visible = true
+	timer.start()
+
+
+func _on_slice_delay_timeout():
+	slice_area.visible = false
