@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3lk1e50ulg5o"
 path.s3tc="res://.godot/imported/wall_Tsplit_dungeon_texture.png-dae0f239a49742e2ecbf5cc8f761425e.s3tc.ctex"
+path.etc2="res://.godot/imported/wall_Tsplit_dungeon_texture.png-dae0f239a49742e2ecbf5cc8f761425e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/wall_Tsplit_dungeon_texture.png"
-dest_files=["res://.godot/imported/wall_Tsplit_dungeon_texture.png-dae0f239a49742e2ecbf5cc8f761425e.s3tc.ctex"]
+dest_files=["res://.godot/imported/wall_Tsplit_dungeon_texture.png-dae0f239a49742e2ecbf5cc8f761425e.s3tc.ctex", "res://.godot/imported/wall_Tsplit_dungeon_texture.png-dae0f239a49742e2ecbf5cc8f761425e.etc2.ctex"]
 
 [params]
 

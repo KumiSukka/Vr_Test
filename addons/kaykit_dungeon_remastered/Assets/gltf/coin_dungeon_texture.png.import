@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://2cxswdamtu58"
 path.s3tc="res://.godot/imported/coin_dungeon_texture.png-d0235972f81ec5a37d6ba36e6f7ef273.s3tc.ctex"
+path.etc2="res://.godot/imported/coin_dungeon_texture.png-d0235972f81ec5a37d6ba36e6f7ef273.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/coin_dungeon_texture.png"
-dest_files=["res://.godot/imported/coin_dungeon_texture.png-d0235972f81ec5a37d6ba36e6f7ef273.s3tc.ctex"]
+dest_files=["res://.godot/imported/coin_dungeon_texture.png-d0235972f81ec5a37d6ba36e6f7ef273.s3tc.ctex", "res://.godot/imported/coin_dungeon_texture.png-d0235972f81ec5a37d6ba36e6f7ef273.etc2.ctex"]
 
 [params]
 

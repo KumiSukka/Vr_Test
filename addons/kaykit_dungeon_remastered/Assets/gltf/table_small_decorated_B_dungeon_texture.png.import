@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://drgvwsv7iatqf"
 path.s3tc="res://.godot/imported/table_small_decorated_B_dungeon_texture.png-10673ebf04559142921c6fabd8b24f45.s3tc.ctex"
+path.etc2="res://.godot/imported/table_small_decorated_B_dungeon_texture.png-10673ebf04559142921c6fabd8b24f45.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/table_small_decorated_B_dungeon_texture.png"
-dest_files=["res://.godot/imported/table_small_decorated_B_dungeon_texture.png-10673ebf04559142921c6fabd8b24f45.s3tc.ctex"]
+dest_files=["res://.godot/imported/table_small_decorated_B_dungeon_texture.png-10673ebf04559142921c6fabd8b24f45.s3tc.ctex", "res://.godot/imported/table_small_decorated_B_dungeon_texture.png-10673ebf04559142921c6fabd8b24f45.etc2.ctex"]
 
 [params]
 

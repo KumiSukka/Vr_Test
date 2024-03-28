@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx5r8cro67rgi"
 path.s3tc="res://.godot/imported/Sprite-000.png-f509465bd27388a9fd715dad81b41939.s3tc.ctex"
+path.etc2="res://.godot/imported/Sprite-000.png-f509465bd27388a9fd715dad81b41939.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Interfaces/Sprite-000.png"
-dest_files=["res://.godot/imported/Sprite-000.png-f509465bd27388a9fd715dad81b41939.s3tc.ctex"]
+dest_files=["res://.godot/imported/Sprite-000.png-f509465bd27388a9fd715dad81b41939.s3tc.ctex", "res://.godot/imported/Sprite-000.png-f509465bd27388a9fd715dad81b41939.etc2.ctex"]
 
 [params]
 
