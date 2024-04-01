@@ -2,7 +2,7 @@ extends XRToolsPickable
 @onready var shoot_point = $Shoot_point
 @onready var input_cooldown = $Input_cooldown
 var Bellet = preload("res://Assets/bellet.tscn")
-@export var bellet_speed =  -12.0
+@export var bellet_speed =  -16.0
 var cooldown = true
 
 
