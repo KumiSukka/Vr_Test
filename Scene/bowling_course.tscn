@@ -127,20 +127,6 @@ one_shot = true
 
 [node name="Node3D" type="Node3D" parent="."]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79043, 3.90523, -3.98459)
-light_energy = 3.0
-light_bake_mode = 1
-shadow_enabled = true
-omni_range = 9.05091
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79, 3.905, 5.985)
-light_energy = 3.0
-light_bake_mode = 1
-shadow_enabled = true
-omni_range = 9.05091
-
 [node name="OmniLight3D3" type="OmniLight3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2096, 3.90523, -3.98459)
 light_energy = 3.0
@@ -164,20 +150,6 @@ omni_range = 9.05091
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.21, 3.905, 5.985)
-light_energy = 3.0
-light_bake_mode = 1
-shadow_enabled = true
-omni_range = 9.05091
-
-[node name="OmniLight3D7" type="OmniLight3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.2096, 3.90523, -3.98459)
-light_energy = 3.0
-light_bake_mode = 1
-shadow_enabled = true
-omni_range = 9.05091
-
-[node name="OmniLight3D8" type="OmniLight3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.21, 3.905, 5.985)
 light_energy = 3.0
 light_bake_mode = 1
 shadow_enabled = true
