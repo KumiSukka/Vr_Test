@@ -14,3 +14,4 @@ Controls:
 	right joystick backwards and forward moving
 	front thumbers action
 	back thumbers pick up or grap
+[Godot and xr-development.pdf](https://github.com/KumiSukka/Vr_Test/files/14836029/Godot.and.xr-development.pdf)
