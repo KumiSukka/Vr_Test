@@ -4,11 +4,13 @@ Vr playground
 addons: 
 meshslicing
 kaykits protoyt & dungeon asset packs
+Godot xr tools & Godot xr Openxr loaders
 
 Controls:
-	x/a is for jumping
+	a is for jumping
+ 	x for teleport
 	y/b is for changing stance/changing to swimmin in sea level
-	left joystick teleportation
-	right joystick turning and backwards and forward moving
+	left joystick turn left and right
+	right joystick backwards and forward moving
 	front thumbers action
 	back thumbers pick up or grap
