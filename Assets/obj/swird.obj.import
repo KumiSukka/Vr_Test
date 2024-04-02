@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d2ytraf5hns2g"
+path="res://.godot/imported/swird.obj-bf8a8258f87e9c1d17ac79bb68200ede.mesh"
+
+[deps]
+
+files=["res://.godot/imported/swird.obj-bf8a8258f87e9c1d17ac79bb68200ede.mesh"]
+
+source_file="res://Assets/obj/swird.obj"
+dest_files=["res://.godot/imported/swird.obj-bf8a8258f87e9c1d17ac79bb68200ede.mesh", "res://.godot/imported/swird.obj-bf8a8258f87e9c1d17ac79bb68200ede.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

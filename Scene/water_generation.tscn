@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://b2g5pp80q1rkg" path="res://Scene/player_swim.tscn" id="4_i5rws"]
 [ext_resource type="Material" uid="uid://bh228py0i6ldf" path="res://Assets/materials/underwater_caustics.tres" id="5_ebfi2"]
 [ext_resource type="ArrayMesh" uid="uid://gec4jsf88wcc" path="res://Assets/boat.obj" id="6_4mn25"]
-[ext_resource type="Script" path="res://floating.gd" id="6_jm4w0"]
+[ext_resource type="Script" path="res://Assets/floating.gd" id="6_jm4w0"]
 [ext_resource type="ArrayMesh" uid="uid://k7v2h0uj0ubg" path="res://Assets/scuba_map.obj" id="75_l8cwx"]
-[ext_resource type="PackedScene" uid="uid://b8ns0ph10a5bf" path="res://floater.tscn" id="77_anwys"]
+[ext_resource type="PackedScene" uid="uid://b8ns0ph10a5bf" path="res://Assets/floater.tscn" id="77_anwys"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rcssk"]
 render_priority = 0

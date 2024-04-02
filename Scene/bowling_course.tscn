@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=3 uid="uid://bc13cmebm50y3"]
 
 [ext_resource type="Script" path="res://Scene/main.gd" id="1_bn8k0"]
-[ext_resource type="PackedScene" uid="uid://mt6nlc0psfcy" path="res://bowling_ball.tscn" id="4_8v35i"]
+[ext_resource type="PackedScene" uid="uid://mt6nlc0psfcy" path="res://Assets/bowling/bowling_ball.tscn" id="4_8v35i"]
 [ext_resource type="MeshLibrary" uid="uid://dh013jkukc3tx" path="res://floorlib.tres" id="4_y420c"]
-[ext_resource type="PackedScene" uid="uid://xg22xnkhvtta" path="res://bowling_pin.tscn" id="5_2jadx"]
+[ext_resource type="PackedScene" uid="uid://xg22xnkhvtta" path="res://Assets/bowling/bowling_pin.tscn" id="5_2jadx"]
 [ext_resource type="PackedScene" uid="uid://br7wshv6lvv7u" path="res://Scene/player.tscn" id="6_mv7cd"]
 [ext_resource type="Script" path="res://Scene/Pins.gd" id="6_oaylm"]
 [ext_resource type="ArrayMesh" uid="uid://dvxn0u4e5kgh" path="res://Assets/bowling/obj/bowling_area.obj" id="6_upvu8"]

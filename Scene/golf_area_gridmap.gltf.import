@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b0b81m05bcffk"
-path="res://.godot/imported/golf_area_gridmap.gltf-f719bf71cb39c8524e36d81e511acbf6.scn"
+path="res://.godot/imported/golf_area_gridmap.gltf-75ee3abef7c66435aac225a9e7cf6d13.scn"
 
 [deps]
 
-source_file="res://golf_area_gridmap.gltf"
-dest_files=["res://.godot/imported/golf_area_gridmap.gltf-f719bf71cb39c8524e36d81e511acbf6.scn"]
+source_file="res://Scene/golf_area_gridmap.gltf"
+dest_files=["res://.godot/imported/golf_area_gridmap.gltf-75ee3abef7c66435aac225a9e7cf6d13.scn"]
 
 [params]
 

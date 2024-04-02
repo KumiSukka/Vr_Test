@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b8ns0ph10a5bf"]
 
-[ext_resource type="Script" path="res://floater.gd" id="1_hxu3c"]
+[ext_resource type="Script" path="res://Assets/floater.gd" id="1_hxu3c"]
 [ext_resource type="ArrayMesh" uid="uid://gufjnc4r2eu7" path="res://Assets/crate.obj" id="2_vic7n"]
 [ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="3_t41m6"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="4_n05aq"]
