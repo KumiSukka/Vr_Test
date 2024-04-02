@@ -618,7 +618,6 @@ viewport_size = Vector2(420, 200)
 transform = Transform3D(1, -1.24111e-15, 2.98023e-08, -2.98023e-08, -4.37114e-08, 1, 6.15954e-17, -1, -4.37114e-08, 0, 12.0071, 0)
 light_color = Color(0.976471, 0, 0.482353, 1)
 light_energy = 4.0
-shadow_enabled = true
 spot_range = 46.7102
 spot_angle = 77.0068
 
@@ -626,14 +625,12 @@ spot_angle = 77.0068
 transform = Transform3D(0.784419, 2.71112e-08, -0.620231, 0.620231, -3.4288e-08, 0.784419, 1.43502e-15, -1, -4.37114e-08, -10.477, 15.9741, -35.0372)
 light_color = Color(0.976471, 0, 0.482353, 1)
 light_energy = 5.0
-shadow_enabled = true
 spot_range = 33.0572
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.07289, 0.99734, 0, -0.99734, 0.07289, 11.4888, 24.6527, -52.7148)
 light_color = Color(0.976471, 0, 0.482353, 1)
 light_energy = 4.38
-shadow_enabled = true
 shadow_bias = 0.379
 spot_range = 24.3208
 spot_angle = 59.1646
@@ -642,7 +639,6 @@ spot_angle = 59.1646
 transform = Transform3D(0.965926, -0.114092, 0.232315, 0, 0.897597, 0.440817, -0.258819, -0.425796, 0.867012, 40.4202, 24.1458, -44.525)
 light_color = Color(0.976471, 0, 0.482353, 1)
 light_energy = 10.0
-shadow_enabled = true
 spot_range = 41.0
 spot_angle = 36.789
 
@@ -678,7 +674,6 @@ shape = SubResource("SphereShape3D_1b3dw")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 61.1377, 11.591, -70.9359)
-shadow_enabled = true
 spot_range = 5.96573
 spot_angle = 38.2795
 
