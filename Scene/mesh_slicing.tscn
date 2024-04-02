@@ -360,7 +360,7 @@ shape = SubResource("ConvexPolygonShape3D_ha1v7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.634, 12.1159, -64.1358)
 collision_layer = 2147483649
 collision_mask = 2147483649
-mass = 20.0
+mass = 5.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBodys/RigidBody3D8"]
 mesh = ExtResource("7_kjrpn")
@@ -371,7 +371,7 @@ shape = SubResource("ConvexPolygonShape3D_shhnk")
 
 [node name="RigidBody3D9" type="RigidBody3D" parent="RigidBodys"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.634, 12.5414, -64.1358)
-mass = 20.0
+mass = 5.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBodys/RigidBody3D9"]
 mesh = ExtResource("8_561k5")

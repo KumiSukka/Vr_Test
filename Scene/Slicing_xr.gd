@@ -96,9 +96,9 @@ func slice_automatic():
 				var aabb = meshes[0].get_aabb()
 				var aabb2 = meshes[1].get_aabb()
 				#queue_free() if the mesh is too small
-				if aabb2.size.length() < 0.3:
+				if aabb2.size.length() < 0.5:
 					body2.queue_free()
-				if aabb.size.length() < 0.3:
+				if aabb.size.length() < 0.5:
 					body.queue_free()
 					
 				#adjust the rigidbody center of mass
