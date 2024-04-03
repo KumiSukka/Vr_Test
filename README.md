@@ -1,13 +1,13 @@
 # Vr_Test
 
-##Vr playground
+## Vr playground
 
-##addons: 
+## addons: 
 meshslicing
 kaykits protoyt & dungeon asset packs
 Godot xr tools & Godot xr Openxr loaders
 
-##Controls:
+## Controls:
 	a is for jumping
  	x for teleport
 	y/b is for changing stance
