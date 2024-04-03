@@ -9,9 +9,9 @@ Godot xr tools & Godot xr Openxr loaders
 Controls:
 	a is for jumping
  	x for teleport
-	y/b is for changing stance/changing to swimmin in sea level
-	left joystick turn left and right
-	right joystick backwards and forward moving
+	y/b is for changing stance
+	right joystick turn left and right
+	left joystick backwards and forward moving
 	front thumbers action
 	back thumbers pick up or grap
 [Godot and xr-development.pdf](https://github.com/KumiSukka/Vr_Test/files/14836029/Godot.and.xr-development.pdf)
